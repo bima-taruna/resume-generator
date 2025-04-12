@@ -1,9 +1,11 @@
-import Canvas from "./components/Canvas";
-
+import { PDFViewer } from "@react-pdf/renderer";
+import Resume from "./components/Resume";
 function App() {
   return (
     <>
-      <Canvas />
+      <section>this is the input section</section>
+
+      <Resume />
     </>
   );
 }
