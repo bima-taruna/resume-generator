@@ -1,0 +1,10 @@
+.resume-body {
+  background-color: white;
+  padding: 2rem 4rem;
+  width: 8.5in; /* or 210mm / 21cm for A4 */
+  height: 11in; /* or 297mm / 29.7cm for A4 */
+  padding: 2.5rem 3rem; /* 40px top/bottom, 48px left/right */
+  background: white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin: auto;
+}
