@@ -1,14 +1,14 @@
 import "../../styles/resumeHeader.css";
-function ResumeHeader() {
+function ResumeHeader({ basicData }) {
   return (
     <header className="resume-header">
-      <h1 className="full-name">John Doe</h1>
-      <h2 className="headline">Fullstack Web Developer</h2>
+      <h1 className="full-name">{basicData.fullName}</h1>
+      <h2 className="headline">{basicData.headline}</h2>
       <ul>
-        <li className="location">Medan, Indonesia</li>
-        <li className="phone-number">085762068329</li>
-        <li className="email">johnDoe@email.com</li>
-        <li className="website"></li>
+        <li className="location">{basicData.location}</li>
+        <li className="phone-number">{basicData.phoneNumber}</li>
+        <li className="email">{basicData.email}</li>
+        <li className="website">{basicData.website}</li>
       </ul>
     </header>
   );
