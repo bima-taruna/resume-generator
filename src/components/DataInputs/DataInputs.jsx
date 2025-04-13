@@ -1,9 +1,9 @@
 import "../../styles/dataInputs.css";
 import BasicForm from "./BasicForm";
-function DataInputs() {
+function DataInputs({ basicData, onChange }) {
   return (
     <section className="data-inputs">
-      <BasicForm />
+      <BasicForm basicData={basicData} onChange={onChange} />
     </section>
   );
 }
