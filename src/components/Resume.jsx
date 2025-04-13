@@ -1,22 +1,16 @@
 import "../styles/resume.css";
+import ResumeHeader from "./ResumeHeader";
 function Resume() {
   return (
     <section className="resume-canvas">
-      <header>
-        <h1 className="full-name">John Doe</h1>
-        <h2 className="headline">Unemployment</h2>
-        <ul>
-          <li className="location">City, Country</li>
-          <li className="phone-number">000000000000</li>
-          <li className="email">johnDoe@email.com</li>
-          <li className="website"></li>
-        </ul>
-      </header>
+      <ResumeHeader />
+      <hr />
       <section className="profile">
         <h3>Profiles</h3>
         <a href="http://">example.com</a>
         <a href="http://">example.com</a>
       </section>
+      <hr />
       <section className="summary">
         <h3>Summary</h3>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident
@@ -24,6 +18,7 @@ function Resume() {
         tempora possimus atque, illo eius neque, nesciunt mollitia qui quia nemo
         eos.
       </section>
+      <hr />
       <section className="experience">
         <h3>Experience</h3>
         <ul className="exp-list">
@@ -45,6 +40,7 @@ function Resume() {
           </li>
         </ul>
       </section>
+      <hr />
       <section className="education">
         <h3>Education</h3>
         <ul className="edu-list">
@@ -61,6 +57,7 @@ function Resume() {
           </li>
         </ul>
       </section>
+      <hr />
       <section className="projects">
         <h3>Projects </h3>
         <ul className="project-list">
@@ -81,6 +78,7 @@ function Resume() {
           </li>
         </ul>
       </section>
+      <hr />
       <section className="skills">
         <h3>Skills</h3>
         <ul>
@@ -90,6 +88,7 @@ function Resume() {
           <li>PHP</li>
         </ul>
       </section>
+      <hr />
       <section className="certifications">
         <h3>Certifications</h3>
         <ul>
@@ -107,6 +106,7 @@ function Resume() {
           </li>
         </ul>
       </section>
+      <hr />
       <section className="language">
         <h3>Language</h3>
         <ul>
