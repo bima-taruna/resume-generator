@@ -1,9 +1,9 @@
 import "../../styles/resume.css";
 import ResumeHeader from "./ResumeHeader";
-function Resume() {
+function Resume({ basicData }) {
   return (
     <section className="resume-canvas">
-      <ResumeHeader />
+      <ResumeHeader basicData={basicData} />
       <hr />
       <section className="profile">
         <h3>Profiles</h3>
