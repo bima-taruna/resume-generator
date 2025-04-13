@@ -1,4 +1,4 @@
-import "../styles/resumeHeader.css";
+import "../../styles/resumeHeader.css";
 function ResumeHeader() {
   return (
     <header className="resume-header">
