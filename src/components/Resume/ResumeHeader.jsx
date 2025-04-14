@@ -5,10 +5,16 @@ function ResumeHeader({ basicData }) {
       <h1 className="full-name">{basicData.fullName}</h1>
       <h2 className="headline">{basicData.headline}</h2>
       <ul>
-        <li className="location">{basicData.location}</li>
-        <li className="phone-number">{basicData.phoneNumber}</li>
-        <li className="email">{basicData.email}</li>
-        <li className="website">{basicData.website}</li>
+        {basicData.location && (
+          <li className="location">{basicData.location}</li>
+        )}
+        {basicData.phoneNumber && (
+          <li className="phone-number">| {basicData.phoneNumber}</li>
+        )}
+        {basicData.email && <li className="email">| {basicData.email}</li>}
+        {basicData.website && (
+          <li className="website">| {basicData.website}</li>
+        )}
       </ul>
     </header>
   );
