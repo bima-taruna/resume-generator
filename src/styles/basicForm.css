@@ -1,0 +1,10 @@
+.basic-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.basic-form > div {
+  display: flex;
+  gap: 0.5rem;
+}

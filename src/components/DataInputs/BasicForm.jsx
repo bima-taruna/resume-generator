@@ -1,4 +1,5 @@
 import TextInput from "../TextInput";
+import "../../styles/basicForm.css";
 
 function BasicForm({ basicData, onChange }) {
   return (
@@ -15,30 +16,34 @@ function BasicForm({ basicData, onChange }) {
         value={basicData.headline}
         onChange={onChange}
       />
-      <TextInput
-        label={"Email"}
-        name={"email"}
-        value={basicData.email}
-        onChange={onChange}
-      />
-      <TextInput
-        label={"Website"}
-        name={"website"}
-        value={basicData.website}
-        onChange={onChange}
-      />
-      <TextInput
-        label={"Phone"}
-        name={"phone"}
-        value={basicData.phoneNumber}
-        onChange={onChange}
-      />
-      <TextInput
-        label={"Location"}
-        name={"location"}
-        value={basicData.location}
-        onChange={onChange}
-      />
+      <div>
+        <TextInput
+          label={"Email"}
+          name={"email"}
+          value={basicData.email}
+          onChange={onChange}
+        />
+        <TextInput
+          label={"Phone"}
+          name={"phone"}
+          value={basicData.phoneNumber}
+          onChange={onChange}
+        />
+      </div>
+      <div>
+        <TextInput
+          label={"Website"}
+          name={"website"}
+          value={basicData.website}
+          onChange={onChange}
+        />
+        <TextInput
+          label={"Location"}
+          name={"location"}
+          value={basicData.location}
+          onChange={onChange}
+        />
+      </div>
     </form>
   );
 }
