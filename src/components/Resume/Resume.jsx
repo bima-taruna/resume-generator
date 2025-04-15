@@ -4,23 +4,23 @@ function Resume({ basicData }) {
   return (
     <section className="resume-canvas">
       <ResumeHeader basicData={basicData} />
-      <hr />
-      <section className="profile">
+      <section id="profile">
         <h3>Profiles</h3>
+        <hr />
         <a href="http://">example.com</a>
         <a href="http://">example.com</a>
       </section>
-      <hr />
-      <section className="summary">
+      <section id="summary">
         <h3>Summary</h3>
+        <hr />
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident
         veritatis numquam iure ad magni tenetur explicabo, voluptates illum
         tempora possimus atque, illo eius neque, nesciunt mollitia qui quia nemo
         eos.
       </section>
-      <hr />
-      <section className="experience">
+      <section id="experience">
         <h3>Experience</h3>
+        <hr />
         <ul className="exp-list">
           <li>
             <div className="exp-header">
@@ -40,9 +40,9 @@ function Resume({ basicData }) {
           </li>
         </ul>
       </section>
-      <hr />
-      <section className="education">
+      <section id="education">
         <h3>Education</h3>
+        <hr />
         <ul className="edu-list">
           <li>
             <div className="edu-header">
@@ -57,9 +57,9 @@ function Resume({ basicData }) {
           </li>
         </ul>
       </section>
-      <hr />
-      <section className="projects">
+      <section id="projects">
         <h3>Projects </h3>
+        <hr />
         <ul className="project-list">
           <li>
             <div className="project-header">
@@ -78,9 +78,9 @@ function Resume({ basicData }) {
           </li>
         </ul>
       </section>
-      <hr />
-      <section className="skills">
+      <section id="skills">
         <h3>Skills</h3>
+        <hr />
         <ul>
           <li>HTML</li>
           <li>Javascript</li>
@@ -88,9 +88,9 @@ function Resume({ basicData }) {
           <li>PHP</li>
         </ul>
       </section>
-      <hr />
-      <section className="certifications">
+      <section id="certifications">
         <h3>Certifications</h3>
+        <hr />
         <ul>
           <li>
             <div className="cert-header">
@@ -106,9 +106,9 @@ function Resume({ basicData }) {
           </li>
         </ul>
       </section>
-      <hr />
-      <section className="language">
+      <section id="language">
         <h3>Language</h3>
+        <hr />
         <ul>
           <li>English</li>
           <li>Indonesia</li>
