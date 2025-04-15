@@ -1,15 +1,30 @@
-.resume-header {
+#resume-header {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  flex: 2;
+}
+
+.user-pic {
+  border: 1px solid black;
+  width: 64px;
+  height: 50px;
+  max-width: 64px;
+  align-self: flex-start;
+}
+
+.basic-data {
+  width: 100%;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
   gap: 0.5rem;
-  flex: 2;
 }
 
 .full-name {
   font-weight: bold;
   font-size: 1.5rem;
-  line-height: 2rem;
+  line-height: 1rem;
 }
 
 .headline {
@@ -17,8 +32,9 @@
   line-height: 1.5rem;
 }
 
-.resume-header > ul {
+.basic-data > ul {
   display: flex;
+  gap: 0.3rem;
   flex-wrap: wrap;
 }
 
