@@ -1,9 +1,14 @@
 import TextInput from "../TextInput";
 import "../../styles/basicForm.css";
+import { FaRegUser } from "react-icons/fa";
 
 function BasicForm({ basicData, onChange }) {
   return (
-    <form className="basic-form">
+    <section id="basics">
+      <header>
+        <FaRegUser />
+        <h2>Basics</h2>
+      </header>
       <TextInput
         label={"Full Name"}
         name={"fullName"}
@@ -44,7 +49,7 @@ function BasicForm({ basicData, onChange }) {
           onChange={onChange}
         />
       </div>
-    </form>
+    </section>
   );
 }
 
