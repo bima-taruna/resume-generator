@@ -1,4 +1,6 @@
+import { GrLink, GrLocation, GrPhone } from "react-icons/gr";
 import "../../styles/resumeHeader.css";
+import { MdAlternateEmail } from "react-icons/md";
 function ResumeHeader({ basicData }) {
   return (
     <header id="resume-header">
@@ -8,14 +10,25 @@ function ResumeHeader({ basicData }) {
         <h2 className="headline">{basicData.headline}</h2>
         <ul>
           {basicData.location && (
-            <li className="location">{basicData.location}</li>
+            <li className="location">
+              <GrLocation />
+              {basicData.location}
+            </li>
           )}
           {basicData.phoneNumber && (
-            <li className="phone-number">| {basicData.phoneNumber}</li>
+            <li className="phone-number">
+              | <GrPhone /> {basicData.phoneNumber}
+            </li>
           )}
-          {basicData.email && <li className="email">| {basicData.email}</li>}
+          {basicData.email && (
+            <li className="email">
+              | <MdAlternateEmail /> {basicData.email}
+            </li>
+          )}
           {basicData.website && (
-            <li className="website">| {basicData.website}</li>
+            <li className="website">
+              | <GrLink /> {basicData.website}
+            </li>
           )}
         </ul>
       </div>
