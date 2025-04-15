@@ -1,6 +1,6 @@
 import "../../styles/resume.css";
 import ResumeHeader from "./ResumeHeader";
-function Resume({ basicData }) {
+function Resume({ basicData, summary }) {
   return (
     <section className="resume-canvas">
       <ResumeHeader basicData={basicData} />
@@ -13,10 +13,7 @@ function Resume({ basicData }) {
       <section id="summary">
         <h3>Summary</h3>
         <hr />
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident
-        veritatis numquam iure ad magni tenetur explicabo, voluptates illum
-        tempora possimus atque, illo eius neque, nesciunt mollitia qui quia nemo
-        eos.
+        {summary}
       </section>
       <section id="experience">
         <h3>Experience</h3>
