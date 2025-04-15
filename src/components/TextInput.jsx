@@ -1,3 +1,4 @@
+import "../styles/textInput.css";
 function TextInput({ label, name, value, onChange }) {
   return (
     <div className="input-container">
