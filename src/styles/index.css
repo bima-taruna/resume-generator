@@ -134,5 +134,8 @@ table {
   width: 100vw;
   height: 100vh;
   overflow-y: scroll;
-  background-color: aquamarine;
+  background-color: black;
+  color: white;
+
+  font-family: "IBM Plex Serif", serif;
 }
