@@ -27,7 +27,7 @@ function ResumeHeader({ basicData }) {
           )}
           {basicData.website && (
             <li className="website">
-              | <GrLink /> {basicData.website}
+              | <GrLink /> <a href={basicData.website}>Website</a>
             </li>
           )}
         </ul>
