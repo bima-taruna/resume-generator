@@ -8,16 +8,3 @@
   display: flex;
   gap: 0.5rem;
 }
-
-#basics > header {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  margin-bottom: 1rem;
-}
-
-#basics > header > h2 {
-  font-size: 1.875rem;
-  line-height: 2.25rem;
-  font-weight: 700;
-}
