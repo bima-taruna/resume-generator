@@ -18,3 +18,9 @@
   line-height: 2.25rem;
   font-weight: 700;
 }
+
+.data-inputs > section > ul {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
