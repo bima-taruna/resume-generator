@@ -6,6 +6,7 @@ import data from "./data/dummy-data";
 function App() {
   const [basicData, setBasicData] = useState(data.basic);
   const [summary, setSummary] = useState(data.summary);
+  const [experience, setExperience] = useState(data.experience);
   const handleBasicChange = (e) => {
     const { name, value } = e.target;
 
@@ -28,6 +29,7 @@ function App() {
       <DataInputs
         basicData={basicData}
         summaryData={summary}
+        experienceData={experience}
         onChange={handleBasicChange}
       />
       <Resume basicData={basicData} summary={summary} />
