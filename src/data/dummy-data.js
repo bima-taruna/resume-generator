@@ -19,7 +19,7 @@ const data = {
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident veritatis numquam iure ad magni tenetur explicabo, voluptates illum tempora possimus atque, illo eius neque, nesciunt mollitia qui quia nemoeos.",
     },
     {
-      company: "PT mencari cinta sejati",
+      company: "PT Tekno Sejahtera",
       date: "August 2017 - January 2024",
       position: "Fullstack Dev",
       location: "Medan",
