@@ -1,3 +1,4 @@
+import "../styles/textArea.css";
 function TextArea({ label, name, value, onChange }) {
   return (
     <div className="text-area-container">
