@@ -7,7 +7,7 @@ function App() {
   const [basicData, setBasicData] = useState(data.basic);
   const [summary, setSummary] = useState(data.summary);
   const [experience, setExperience] = useState(data.experience);
-  const handleBasicChange = (e) => {
+  const handleChange = (e) => {
     const { name, value } = e.target;
 
     switch (e.target.id) {
@@ -30,7 +30,7 @@ function App() {
         basicData={basicData}
         summaryData={summary}
         experienceData={experience}
-        onChange={handleBasicChange}
+        onChange={handleChange}
       />
       <Resume basicData={basicData} summary={summary} />
     </>
