@@ -4,35 +4,44 @@ import DataInputs from "./components/DataInputs/DataInputs";
 import { useState } from "react";
 import data from "./data/dummy-data";
 function App() {
-  const [basicData, setBasicData] = useState(data.basic);
-  const [summary, setSummary] = useState(data.summary);
-  const [experience, setExperience] = useState(data.experience);
+  const [resumeData, setResumeData] = useState({
+    basic: data.basic,
+    summary: data.summary,
+    experience: data.experience,
+  });
+
   const handleChange = (e) => {
-    const { name, value } = e.target;
+    const { name, value, id } = e.target;
 
-    switch (e.target.id) {
-      case "summary":
-        setSummary(e.target.value);
-        break;
+    setResumeData((prev) => {
+      switch (id) {
+        case "summary":
+          return {
+            ...prev,
+            summary: value,
+          };
 
-      default:
-        setBasicData((prev) => ({
-          ...prev,
-          [name]: value,
-        }));
-        break;
-    }
+        default:
+          return {
+            ...prev,
+            basic: {
+              ...prev.basic,
+              [name]: value,
+            },
+          };
+      }
+    });
   };
 
   return (
     <>
       <DataInputs
-        basicData={basicData}
-        summaryData={summary}
-        experienceData={experience}
+        basicData={resumeData.basic}
+        summaryData={resumeData.summary}
+        experienceData={resumeData.experience}
         onChange={handleChange}
       />
-      <Resume basicData={basicData} summary={summary} />
+      <Resume basicData={resumeData.basic} summary={resumeData.summary} />
     </>
   );
 }
