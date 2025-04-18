@@ -5,6 +5,7 @@ import { useState } from "react";
 import data from "./data/dummy-data";
 import Modal from "./components/Modal";
 import modalTypes from "./helper/modalTypes";
+import ExperienceForm from "./components/Forms/ExperienceForm";
 function App() {
   const [resumeData, setResumeData] = useState({
     basic: data.basic,
@@ -48,11 +49,11 @@ function App() {
       />
       <Resume basicData={resumeData.basic} summary={resumeData.summary} />
       <Modal
-        isOpen={activeModal === modalTypes.EXPERIENCE}
+        headerText={"+ Create a new item"}
+        isOpen={activeModal !== null}
         onClose={() => setActiveModal(null)}
       >
-        <h2>Hello from Modal 👋</h2>
-        <p>This is a simple modal using React + CSS only.</p>
+        {activeModal === modalTypes.EXPERIENCE && <ExperienceForm />}
       </Modal>
     </>
   );
