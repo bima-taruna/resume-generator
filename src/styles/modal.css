@@ -16,8 +16,10 @@
   padding: 2rem;
   border-radius: 10px;
   position: relative;
-  min-width: 300px;
-  max-width: 500px;
+  width: 100%;
+  height: 100%;
+  max-width: 30rem;
+  max-height: 80vh;
 }
 
 .modal-close {
@@ -34,6 +36,6 @@
 .modal-header {
   position: absolute;
   top: 1rem;
-  left: 1rem;
+  left: 2rem;
   font-weight: 500;
 }
