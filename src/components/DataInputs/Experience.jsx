@@ -3,7 +3,8 @@ import ItemCard from "../ItemCard";
 import Button from "../Button";
 import { IoMdAdd } from "react-icons/io";
 import "../../styles/experience.css";
-function Experience({ experienceData }) {
+import modalTypes from "../../helper/modalTypes";
+function Experience({ experienceData, openModal }) {
   return (
     <section id="experience">
       <header>
@@ -19,6 +20,7 @@ function Experience({ experienceData }) {
         className={"btn-black"}
         icon={<IoMdAdd />}
         text={"Add a new item"}
+        onClick={() => openModal(modalTypes.EXPERIENCE)}
       />
     </section>
   );
