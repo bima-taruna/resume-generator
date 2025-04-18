@@ -1,6 +1,6 @@
 import "../styles/modal.css";
 
-function Modal({ isOpen, onClose, children }) {
+function Modal({ isOpen, onClose, children, headerText }) {
   if (!isOpen) return null;
 
   return (
@@ -9,6 +9,7 @@ function Modal({ isOpen, onClose, children }) {
         <button className="modal-close" onClick={onClose}>
           ×
         </button>
+        <header className="modal-header">{headerText}</header>
         {children}
       </div>
     </div>
