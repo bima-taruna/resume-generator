@@ -1,0 +1,22 @@
+.exp-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.exp-list > li {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.exp-list > li > .exp-header,
+.exp-list > li > .exp-detail {
+  display: flex;
+  justify-content: space-between;
+}
+
+.exp-detail {
+  font-size: 0.875rem;
+  font-weight: 500;
+}

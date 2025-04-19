@@ -1,3 +1,4 @@
+import "../../styles/resumeExperience.css";
 function ResumeExperience({ experienceData }) {
   return (
     <section id="experience">
