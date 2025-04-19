@@ -28,6 +28,7 @@ function Resume({ basicData, summary }) {
               <h4 className="exp-position">Fullstack Dev</h4>
               <h4 className="location">Medan</h4>
             </div>
+            <div className="exp-website"></div>
             <div className="exp-desc">
               Lorem ipsum dolor, sit amet consectetur adipisicing elit. Culpa
               tempora, itaque, inventore sint, architecto excepturi aliquam eius
