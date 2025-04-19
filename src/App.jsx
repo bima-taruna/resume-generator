@@ -42,7 +42,12 @@ function App() {
     e.preventDefault();
     const formData = new FormData(e.target);
     const data = Object.fromEntries(formData.entries());
-    console.log("Form data:", data);
+    setResumeData((prev) => {
+      return {
+        ...prev,
+        experience: [...prev.experience, data],
+      };
+    });
   };
 
   return (
@@ -54,7 +59,11 @@ function App() {
         onChange={handleChange}
         openModal={setActiveModal}
       />
-      <Resume basicData={resumeData.basic} summary={resumeData.summary} />
+      <Resume
+        basicData={resumeData.basic}
+        summary={resumeData.summary}
+        experienceData={resumeData.experience}
+      />
       <Modal
         headerText={"+ Create a new item"}
         isOpen={activeModal !== null}
