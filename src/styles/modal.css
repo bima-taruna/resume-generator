@@ -20,6 +20,7 @@
   height: 100%;
   max-width: 30rem;
   max-height: 80vh;
+  box-shadow: -2px 1px 5px rgb(48, 48, 48);
 }
 
 .modal-close {
