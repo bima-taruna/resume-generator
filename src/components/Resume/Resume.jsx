@@ -1,6 +1,7 @@
 import "../../styles/resume.css";
+import ResumeExperience from "./ResumeExperience";
 import ResumeHeader from "./ResumeHeader";
-function Resume({ basicData, summary }) {
+function Resume({ basicData, summary, experienceData }) {
   return (
     <section className="resume-canvas">
       <ResumeHeader basicData={basicData} />
@@ -15,29 +16,7 @@ function Resume({ basicData, summary }) {
         <hr />
         {summary}
       </section>
-      <section id="experience">
-        <h3>Experience</h3>
-        <hr />
-        <ul className="exp-list">
-          <li>
-            <div className="exp-header">
-              <h3 className="exp-company">PT mencari cinta sejati</h3>
-              <h3 className="exp-date">August 2017 - January 2024</h3>
-            </div>
-            <div className="exp-detail">
-              <h4 className="exp-position">Fullstack Dev</h4>
-              <h4 className="location">Medan</h4>
-            </div>
-            <div className="exp-website"></div>
-            <div className="exp-desc">
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Culpa
-              tempora, itaque, inventore sint, architecto excepturi aliquam eius
-              assumenda quos harum cumque autem. Veniam, laboriosam quisquam! Id
-              a fugiat repudiandae placeat?
-            </div>
-          </li>
-        </ul>
-      </section>
+      <ResumeExperience experienceData={experienceData} />
       <section id="education">
         <h3>Education</h3>
         <hr />
