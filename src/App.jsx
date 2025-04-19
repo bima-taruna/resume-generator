@@ -38,6 +38,13 @@ function App() {
     });
   };
 
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const formData = new FormData(e.target);
+    const data = Object.fromEntries(formData.entries());
+    console.log("Form data:", data);
+  };
+
   return (
     <>
       <DataInputs
@@ -53,7 +60,9 @@ function App() {
         isOpen={activeModal !== null}
         onClose={() => setActiveModal(null)}
       >
-        {activeModal === modalTypes.EXPERIENCE && <ExperienceForm />}
+        {activeModal === modalTypes.EXPERIENCE && (
+          <ExperienceForm handleSubmit={handleSubmit} />
+        )}
       </Modal>
     </>
   );
