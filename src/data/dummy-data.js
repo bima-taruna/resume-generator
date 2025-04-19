@@ -16,7 +16,7 @@ const data = {
       position: "Fullstack Dev",
       location: "Medan",
       website: "",
-      description:
+      summary:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident veritatis numquam iure ad magni tenetur explicabo, voluptates illum tempora possimus atque, illo eius neque, nesciunt mollitia qui quia nemoeos.",
     },
     {
@@ -25,7 +25,7 @@ const data = {
       position: "Fullstack Dev",
       location: "Medan",
       website: "",
-      description:
+      summary:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident veritatis numquam iure ad magni tenetur explicabo, voluptates illum tempora possimus atque, illo eius neque, nesciunt mollitia qui quia nemoeos.",
     },
   ],
