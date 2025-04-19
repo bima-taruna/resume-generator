@@ -15,6 +15,7 @@ const data = {
       date: "August 2017 - January 2024",
       position: "Fullstack Dev",
       location: "Medan",
+      website: "",
       description:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident veritatis numquam iure ad magni tenetur explicabo, voluptates illum tempora possimus atque, illo eius neque, nesciunt mollitia qui quia nemoeos.",
     },
@@ -23,6 +24,7 @@ const data = {
       date: "August 2017 - January 2024",
       position: "Fullstack Dev",
       location: "Medan",
+      website: "",
       description:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident veritatis numquam iure ad magni tenetur explicabo, voluptates illum tempora possimus atque, illo eius neque, nesciunt mollitia qui quia nemoeos.",
     },
