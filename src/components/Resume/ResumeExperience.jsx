@@ -6,8 +6,8 @@ function ResumeExperience({ experienceData }) {
       <hr />
       <ul className="exp-list">
         {experienceData &&
-          experienceData.map((experience) => (
-            <li>
+          experienceData.map((experience, index) => (
+            <li key={index}>
               <div className="exp-header">
                 <h3 className="exp-company">{experience.company}</h3>
                 <h3 className="exp-date">{experience.date}</h3>
