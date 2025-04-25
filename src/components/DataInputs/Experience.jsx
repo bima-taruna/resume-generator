@@ -12,8 +12,8 @@ function Experience({ experienceData, openModal }) {
         <h2>Experience</h2>
       </header>
       <ul>
-        {experienceData?.map((item) => (
-          <ItemCard title={item.company} subtitle={item.position} />
+        {experienceData?.map((item, index) => (
+          <ItemCard key={index} title={item.company} subtitle={item.position} />
         ))}
       </ul>
       <Button
