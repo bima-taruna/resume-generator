@@ -5,7 +5,7 @@ const data = {
     location: "Medan, Indonesia",
     phoneNumber: "085762068329",
     email: "johnDoe@email.com",
-    website: null,
+    website: "",
   },
   summary:
     "Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident veritatis numquam iure ad magni tenetur explicabo, voluptates illum tempora possimus atque, illo eius neque, nesciunt mollitia qui quia nemoeos.",
