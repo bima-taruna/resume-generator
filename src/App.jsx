@@ -48,6 +48,7 @@ function App() {
         experience: [...prev.experience, data],
       };
     });
+    setActiveModal(null);
   };
 
   return (
