@@ -9,6 +9,7 @@ function DataInputs({
   onChange,
   openModal,
   openUpdateModal,
+  setIndexItem,
 }) {
   return (
     <section className="data-inputs">
@@ -18,6 +19,7 @@ function DataInputs({
         experienceData={experienceData}
         openModal={openModal}
         openUpdateModal={openUpdateModal}
+        setIndexItem={setIndexItem}
       />
     </section>
   );
