@@ -4,7 +4,12 @@ import Button from "../Button";
 import { IoMdAdd } from "react-icons/io";
 import "../../styles/experience.css";
 import modalTypes from "../../helper/modalTypes";
-function Experience({ experienceData, openModal, openUpdateModal }) {
+function Experience({
+  experienceData,
+  openModal,
+  openUpdateModal,
+  setIndexItem,
+}) {
   return (
     <section id="experience">
       <header>
@@ -17,7 +22,10 @@ function Experience({ experienceData, openModal, openUpdateModal }) {
             key={index}
             title={item.company}
             subtitle={item.position}
-            handleClick={() => openUpdateModal(modalTypes.EXPERIENCE)}
+            handleClick={() => {
+              openUpdateModal(modalTypes.EXPERIENCE);
+              setIndexItem(index);
+            }}
           />
         ))}
       </ul>
