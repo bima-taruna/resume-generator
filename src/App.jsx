@@ -14,6 +14,7 @@ function App() {
   });
 
   const [activeModal, setActiveModal] = useState(null);
+  const [activeUpdateModal, setActiveUpdateModal] = useState(null);
 
   const handleChange = (e) => {
     const { name, value, id } = e.target;
@@ -59,6 +60,7 @@ function App() {
         experienceData={resumeData.experience}
         onChange={handleChange}
         openModal={setActiveModal}
+        openUpdateModal={setActiveUpdateModal}
       />
       <Resume
         basicData={resumeData.basic}
@@ -72,6 +74,15 @@ function App() {
       >
         {activeModal === modalTypes.EXPERIENCE && (
           <ExperienceForm handleSubmit={handleSubmit} />
+        )}
+      </Modal>
+      <Modal
+        headerText={"Update an existing item"}
+        isOpen={activeUpdateModal !== null}
+        onClose={() => setActiveUpdateModal(null)}
+      >
+        {activeUpdateModal === modalTypes.EXPERIENCE && (
+          <ExperienceForm handleSubmit={() => console.log("submitted")} />
         )}
       </Modal>
     </>
