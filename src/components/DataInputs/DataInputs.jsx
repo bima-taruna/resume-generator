@@ -8,12 +8,17 @@ function DataInputs({
   experienceData,
   onChange,
   openModal,
+  openUpdateModal,
 }) {
   return (
     <section className="data-inputs">
       <BasicForm basicData={basicData} onChange={onChange} />
       <Summary summaryData={summaryData} onChange={onChange} />
-      <Experience experienceData={experienceData} openModal={openModal} />
+      <Experience
+        experienceData={experienceData}
+        openModal={openModal}
+        openUpdateModal={openUpdateModal}
+      />
     </section>
   );
 }
