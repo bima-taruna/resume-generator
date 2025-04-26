@@ -53,6 +53,21 @@ function App() {
     setActiveModal(null);
   };
 
+  const handleUpdateSubmit = (e) => {
+    e.preventDefault();
+    const formData = new FormData(e.target);
+    const data = Object.fromEntries(formData.entries());
+    setResumeData((prev) => {
+      const updatedExperience = [...prev.experience];
+      updatedExperience[indexItem] = data;
+      return {
+        ...prev,
+        experience: updatedExperience,
+      };
+    });
+    setActiveUpdateModal(null);
+  };
+
   return (
     <>
       <DataInputs
@@ -85,7 +100,7 @@ function App() {
       >
         {activeUpdateModal === modalTypes.EXPERIENCE && (
           <ExperienceForm
-            handleSubmit={() => console.log("submitted")}
+            handleSubmit={handleUpdateSubmit}
             data={resumeData.experience[indexItem]}
           />
         )}
