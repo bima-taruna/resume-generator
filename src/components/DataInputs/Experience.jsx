@@ -4,7 +4,7 @@ import Button from "../Button";
 import { IoMdAdd } from "react-icons/io";
 import "../../styles/experience.css";
 import modalTypes from "../../helper/modalTypes";
-function Experience({ experienceData, openModal }) {
+function Experience({ experienceData, openModal, openUpdateModal }) {
   return (
     <section id="experience">
       <header>
@@ -13,7 +13,12 @@ function Experience({ experienceData, openModal }) {
       </header>
       <ul>
         {experienceData?.map((item, index) => (
-          <ItemCard key={index} title={item.company} subtitle={item.position} />
+          <ItemCard
+            key={index}
+            title={item.company}
+            subtitle={item.position}
+            handleClick={() => openUpdateModal(modalTypes.EXPERIENCE)}
+          />
         ))}
       </ul>
       <Button
