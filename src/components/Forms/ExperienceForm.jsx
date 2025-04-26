@@ -6,20 +6,40 @@ function ExperienceForm({ handleSubmit, data = {} }) {
   return (
     <form id="experience-form" onSubmit={handleSubmit}>
       <div>
-        <TextInput label={"Company"} name={"company"} value={data.company} />
-        <TextInput label={"Position"} name={"position"} value={data.position} />
+        <TextInput
+          label={"Company"}
+          name={"company"}
+          defaultValue={data.company || ""}
+        />
+        <TextInput
+          label={"Position"}
+          name={"position"}
+          defaultValue={data.position || ""}
+        />
       </div>
       <div>
         <TextInput
           label={"Date or Date Range"}
           name={"date"}
           placeholder={"March 2023 - Present"}
-          value={data.date}
+          defaultValue={data.date || ""}
         />
-        <TextInput label={"Location"} name={"location"} value={data.location} />
+        <TextInput
+          label={"Location"}
+          name={"location"}
+          defaultValue={data.location || ""}
+        />
       </div>
-      <TextInput label={"Website"} name={"website"} value={data.website} />
-      <TextArea label={"Summary"} name={"summary"} value={data.summary} />
+      <TextInput
+        label={"Website"}
+        name={"website"}
+        defaultValue={data.website || ""}
+      />
+      <TextArea
+        label={"Summary"}
+        name={"summary"}
+        defaultValue={data.summary || ""}
+      />
       <Button
         className={"btn-white"}
         text={data ? "Update" : "Create"}
