@@ -1,5 +1,12 @@
 import "../styles/textInput.css";
-function TextInput({ label, name, value, onChange, placeholder }) {
+function TextInput({
+  label,
+  name,
+  value,
+  onChange,
+  placeholder,
+  defaultValue,
+}) {
   return (
     <div className="input-container">
       <label htmlFor={name}>{label}</label>
@@ -10,6 +17,7 @@ function TextInput({ label, name, value, onChange, placeholder }) {
         value={value}
         onChange={onChange}
         placeholder={placeholder}
+        defaultValue={defaultValue}
       />
     </div>
   );
