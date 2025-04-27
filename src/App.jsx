@@ -85,6 +85,7 @@ function App() {
       <DataInputs
         basicData={resumeData.basic}
         summaryData={resumeData.summary}
+        profilesData={resumeData.profiles}
         experienceData={resumeData.experience}
         onChange={handleChange}
         openModal={setActiveModal}
