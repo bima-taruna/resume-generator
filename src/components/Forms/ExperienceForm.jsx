@@ -2,7 +2,7 @@ import TextArea from "../TextArea";
 import TextInput from "../TextInput";
 import "../../styles/experienceForm.css";
 import Button from "../Button";
-function ExperienceForm({ handleSubmit, data = {} }) {
+function ExperienceForm({ handleSubmit, data = {}, handleDelete, itemIndex }) {
   return (
     <form id="experience-form" onSubmit={handleSubmit}>
       <div>
@@ -40,11 +40,20 @@ function ExperienceForm({ handleSubmit, data = {} }) {
         name={"summary"}
         defaultValue={data.summary || ""}
       />
-      <Button
-        className={"btn-white"}
-        text={data ? "Update" : "Create"}
-        type="submit"
-      />
+      <div className="exp-form-buttons">
+        {Object.keys(data).length > 0 && (
+          <Button
+            className={"btn-red"}
+            text={"Delete"}
+            onClick={() => handleDelete(itemIndex)}
+          />
+        )}
+        <Button
+          className={"btn-white"}
+          text={Object.keys(data).length > 0 ? "Update" : "Create"}
+          type="submit"
+        />
+      </div>
     </form>
   );
 }
