@@ -68,6 +68,17 @@ function App() {
     setActiveUpdateModal(null);
   };
 
+  const handleDelete = (index) => {
+    setResumeData((prev) => {
+      const updatedExperience = prev.experience.filter((_, i) => i !== index);
+      return {
+        ...prev,
+        experience: updatedExperience,
+      };
+    });
+    setActiveUpdateModal(null);
+  };
+
   return (
     <>
       <DataInputs
@@ -102,6 +113,8 @@ function App() {
           <ExperienceForm
             handleSubmit={handleUpdateSubmit}
             data={resumeData.experience[indexItem]}
+            itemIndex={indexItem}
+            handleDelete={handleDelete}
           />
         )}
       </Modal>
