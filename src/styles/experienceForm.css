@@ -9,3 +9,9 @@
   display: flex;
   justify-content: space-between;
 }
+
+#experience-form > .exp-form-buttons {
+  align-self: flex-end;
+  display: flex;
+  gap: 0.5rem;
+}
