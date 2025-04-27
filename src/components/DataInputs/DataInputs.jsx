@@ -6,6 +6,7 @@ import Summary from "./Summary";
 function DataInputs({
   basicData,
   summaryData,
+  profilesData,
   experienceData,
   onChange,
   openModal,
@@ -18,7 +19,7 @@ function DataInputs({
       <hr />
       <Summary summaryData={summaryData} onChange={onChange} />
       <hr />
-      <Profiles />
+      <Profiles profilesData={profilesData} />
       <hr />
       <Experience
         experienceData={experienceData}
