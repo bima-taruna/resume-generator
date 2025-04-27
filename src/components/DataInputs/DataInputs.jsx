@@ -1,6 +1,7 @@
 import "../../styles/dataInputs.css";
 import BasicForm from "./BasicForm";
 import Experience from "./Experience";
+import Profiles from "./Profiles";
 import Summary from "./Summary";
 function DataInputs({
   basicData,
@@ -14,7 +15,11 @@ function DataInputs({
   return (
     <section className="data-inputs">
       <BasicForm basicData={basicData} onChange={onChange} />
+      <hr />
       <Summary summaryData={summaryData} onChange={onChange} />
+      <hr />
+      <Profiles />
+      <hr />
       <Experience
         experienceData={experienceData}
         openModal={openModal}
