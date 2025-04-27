@@ -9,6 +9,18 @@ const data = {
   },
   summary:
     "Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident veritatis numquam iure ad magni tenetur explicabo, voluptates illum tempora possimus atque, illo eius neque, nesciunt mollitia qui quia nemoeos.",
+  profiles: [
+    {
+      type: "linkedin",
+      link: "www.linkedin.com/in/bimataruna",
+      name: "bima-taruna",
+    },
+    {
+      type: "github",
+      link: "https://github.com/bima-taruna",
+      name: "bima-taruna",
+    },
+  ],
   experience: [
     {
       company: "PT mencari cinta sejati",
