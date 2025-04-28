@@ -11,14 +11,14 @@ const data = {
     "Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident veritatis numquam iure ad magni tenetur explicabo, voluptates illum tempora possimus atque, illo eius neque, nesciunt mollitia qui quia nemoeos.",
   profiles: [
     {
-      type: "linkedin",
-      link: "www.linkedin.com/in/bimataruna",
-      name: "bima-taruna",
+      network: "linkedin",
+      website: "https://www.linkedin.com/in/bimataruna/",
+      username: "bima-taruna",
     },
     {
-      type: "github",
-      link: "https://github.com/bima-taruna",
-      name: "bima-taruna",
+      network: "github",
+      website: "https://github.com/bima-taruna",
+      username: "bima-taruna",
     },
   ],
   experience: [
