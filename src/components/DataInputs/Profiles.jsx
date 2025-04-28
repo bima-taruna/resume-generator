@@ -14,7 +14,7 @@ function Profiles({ profilesData, openModal }) {
       </header>
       <ul>
         {profilesData?.map((item, index) => (
-          <ItemCard key={index} title={item.type} subtitle={item.name} />
+          <ItemCard key={index} title={item.network} subtitle={item.username} />
         ))}
       </ul>
       <Button
