@@ -19,7 +19,7 @@ function DataInputs({
       <hr />
       <Summary summaryData={summaryData} onChange={onChange} />
       <hr />
-      <Profiles profilesData={profilesData} />
+      <Profiles profilesData={profilesData} openModal={openModal} />
       <hr />
       <Experience
         experienceData={experienceData}
