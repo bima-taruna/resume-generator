@@ -9,8 +9,8 @@ function ResumeProfiles({ profilesData }) {
         {profilesData &&
           profilesData.map((profile, index) => (
             <li key={index}>
-              {profile.type === "github" ? <FaGithub /> : <FaLinkedin />}
-              <a href={profile.link}>{profile.name}</a>
+              {profile.network === "github" ? <FaGithub /> : <FaLinkedin />}
+              <a href={profile.website}>{profile.username}</a>
             </li>
           ))}
       </ul>
