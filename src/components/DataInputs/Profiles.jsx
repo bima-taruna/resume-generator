@@ -1,7 +1,11 @@
 import { IoShareSocialOutline } from "react-icons/io5";
 import ItemCard from "../ItemCard";
+import Button from "../Button";
+import { IoMdAdd } from "react-icons/io";
+import modalTypes from "../../helper/modalTypes";
+import "../../styles/profiles.css";
 
-function Profiles({ profilesData }) {
+function Profiles({ profilesData, openModal }) {
   return (
     <section id="profiles">
       <header>
@@ -13,6 +17,12 @@ function Profiles({ profilesData }) {
           <ItemCard key={index} title={item.type} subtitle={item.name} />
         ))}
       </ul>
+      <Button
+        className={"btn-black"}
+        icon={<IoMdAdd />}
+        text={"Add a new item"}
+        onClick={() => openModal(modalTypes.PROFILE)}
+      />
     </section>
   );
 }
