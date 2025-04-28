@@ -6,6 +6,7 @@ import data from "./data/dummy-data";
 import Modal from "./components/Modal";
 import modalTypes from "./helper/modalTypes";
 import ExperienceForm from "./components/Forms/ExperienceForm";
+import ProfileForm from "./components/Forms/ProfileForm";
 function App() {
   const [resumeData, setResumeData] = useState({
     basic: data.basic,
@@ -105,6 +106,9 @@ function App() {
       >
         {activeModal === modalTypes.EXPERIENCE && (
           <ExperienceForm handleSubmit={handleSubmit} />
+        )}
+        {activeModal === modalTypes.PROFILE && (
+          <ProfileForm handleSubmit={handleSubmit} />
         )}
       </Modal>
       <Modal
