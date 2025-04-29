@@ -1,3 +1,4 @@
+import "../styles/select.css";
 function Select({ label, name, options, defaultValue }) {
   return (
     <div className="select-container">

@@ -1,0 +1,19 @@
+.select-container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.select-container > label {
+  font-size: 0.875rem;
+  font-weight: 500;
+  line-height: 1;
+}
+.select-container > select {
+  font-size: 0.875rem;
+  border: 1px solid rgb(39, 39, 42);
+  border-radius: 0.25rem;
+  background-color: black;
+  color: white;
+  padding: 0.4rem 0.75rem;
+}
