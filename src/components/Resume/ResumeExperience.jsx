@@ -1,4 +1,5 @@
 import "../../styles/resumeExperience.css";
+import React from "react";
 function ResumeExperience({ experienceData }) {
   return (
     <section id="experience">
@@ -17,7 +18,14 @@ function ResumeExperience({ experienceData }) {
                 <h4 className="exp-location">{experience.location}</h4>
               </div>
               <div className="exp-website">{experience.website}</div>
-              <div className="exp-desc">{experience.summary}</div>
+              <p className="exp-desc">
+                {experience.summary.split("\n").map((line, index) => (
+                  <React.Fragment key={index}>
+                    {line}
+                    <br />
+                  </React.Fragment>
+                ))}
+              </p>
             </li>
           ))}
       </ul>
