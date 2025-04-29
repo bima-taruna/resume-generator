@@ -1,7 +1,7 @@
 import Button from "../Button";
 import Select from "../Select";
 import TextInput from "../TextInput";
-
+import "../../styles/profileForm.css";
 function ProfileForm({ handleSubmit, data = {}, handleDelete, itemIndex }) {
   return (
     <form id="profile-form" onSubmit={handleSubmit}>
