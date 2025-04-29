@@ -84,14 +84,31 @@ function App() {
     setActiveUpdateModal(null);
   };
 
-  const handleDelete = (index) => {
-    setResumeData((prev) => {
-      const updatedExperience = prev.experience.filter((_, i) => i !== index);
-      return {
-        ...prev,
-        experience: updatedExperience,
-      };
-    });
+  const handleDelete = (type, index) => {
+    switch (type) {
+      case "experience":
+        setResumeData((prev) => {
+          const updatedExperience = prev.experience.filter(
+            (_, i) => i !== index
+          );
+          return {
+            ...prev,
+            experience: updatedExperience,
+          };
+        });
+
+        break;
+
+      default:
+        setResumeData((prev) => {
+          const updatedProfile = prev.profiles.filter((_, i) => i !== index);
+          return {
+            ...prev,
+            profiles: updatedProfile,
+          };
+        });
+        break;
+    }
     setActiveUpdateModal(null);
   };
 
@@ -143,6 +160,7 @@ function App() {
             handleSubmit={handleUpdateSubmit}
             data={resumeData.profiles[indexItem]}
             itemIndex={indexItem}
+            handleDelete={handleDelete}
           />
         )}
       </Modal>
