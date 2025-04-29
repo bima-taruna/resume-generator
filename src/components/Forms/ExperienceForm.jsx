@@ -45,7 +45,7 @@ function ExperienceForm({ handleSubmit, data = {}, handleDelete, itemIndex }) {
           <Button
             className={"btn-red"}
             text={"Delete"}
-            onClick={() => handleDelete(itemIndex)}
+            onClick={() => handleDelete("experience", itemIndex)}
           />
         )}
         <Button
