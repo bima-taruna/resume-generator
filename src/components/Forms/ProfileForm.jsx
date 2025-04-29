@@ -29,7 +29,7 @@ function ProfileForm({ handleSubmit, data = {}, handleDelete, itemIndex }) {
           <Button
             className={"btn-red"}
             text={"Delete"}
-            onClick={() => handleDelete(itemIndex)}
+            onClick={() => handleDelete("profile", itemIndex)}
           />
         )}
         <Button
