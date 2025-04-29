@@ -138,6 +138,13 @@ function App() {
             handleDelete={handleDelete}
           />
         )}
+        {activeUpdateModal === modalTypes.PROFILE && (
+          <ProfileForm
+            handleSubmit={handleUpdateSubmit}
+            data={resumeData.profiles[indexItem]}
+            itemIndex={indexItem}
+          />
+        )}
       </Modal>
     </>
   );
