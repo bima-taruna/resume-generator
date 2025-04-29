@@ -44,14 +44,28 @@ function App() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    const id = e.target.id;
     const formData = new FormData(e.target);
     const data = Object.fromEntries(formData.entries());
-    setResumeData((prev) => {
-      return {
-        ...prev,
-        experience: [...prev.experience, data],
-      };
-    });
+    switch (id) {
+      case "experience-form":
+        setResumeData((prev) => {
+          return {
+            ...prev,
+            experience: [...prev.experience, data],
+          };
+        });
+        break;
+
+      default:
+        setResumeData((prev) => {
+          return {
+            ...prev,
+            profiles: [...prev.profiles, data],
+          };
+        });
+        break;
+    }
     setActiveModal(null);
   };
 
