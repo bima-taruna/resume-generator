@@ -5,7 +5,7 @@ import { IoMdAdd } from "react-icons/io";
 import modalTypes from "../../helper/modalTypes";
 import "../../styles/profiles.css";
 
-function Profiles({ profilesData, openModal }) {
+function Profiles({ profilesData, openModal, openUpdateModal, setIndexItem }) {
   return (
     <section id="profiles">
       <header>
@@ -14,7 +14,15 @@ function Profiles({ profilesData, openModal }) {
       </header>
       <ul>
         {profilesData?.map((item, index) => (
-          <ItemCard key={index} title={item.network} subtitle={item.username} />
+          <ItemCard
+            key={index}
+            title={item.network}
+            subtitle={item.username}
+            handleClick={() => {
+              openUpdateModal(modalTypes.PROFILE);
+              setIndexItem(index);
+            }}
+          />
         ))}
       </ul>
       <Button
