@@ -2,16 +2,13 @@ import "../../styles/resume.css";
 import ResumeExperience from "./ResumeExperience";
 import ResumeHeader from "./ResumeHeader";
 import ResumeProfiles from "./ResumeProfiles";
+import ResumeSummary from "./ResumeSummary";
 function Resume({ basicData, summary, experienceData, profilesData }) {
   return (
     <section className="resume-canvas">
       <ResumeHeader basicData={basicData} />
       <ResumeProfiles profilesData={profilesData} />
-      <section id="summary">
-        <h3>Summary</h3>
-        <hr />
-        {summary}
-      </section>
+      <ResumeSummary summary={summary} />
       <ResumeExperience experienceData={experienceData} />
       <section id="education">
         <h3>Education</h3>
