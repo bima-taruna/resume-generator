@@ -4,7 +4,12 @@ import Button from "../Button";
 import { IoMdAdd } from "react-icons/io";
 import "../../styles/education.css";
 import modalTypes from "../../helper/modalTypes";
-function Education({ educationData, openModal }) {
+function Education({
+  educationData,
+  openModal,
+  openUpdateModal,
+  setIndexItem,
+}) {
   return (
     <section id="education">
       <header>
@@ -17,6 +22,10 @@ function Education({ educationData, openModal }) {
             key={index}
             title={item.institution}
             subtitle={item.study}
+            handleClick={() => {
+              openUpdateModal(modalTypes.EDUCATION);
+              setIndexItem(index);
+            }}
           />
         ))}
       </ul>
