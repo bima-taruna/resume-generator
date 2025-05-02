@@ -202,6 +202,13 @@ function App() {
             handleDelete={handleDelete}
           />
         )}
+        {activeUpdateModal === modalTypes.EDUCATION && (
+          <EducationForm
+            handleSubmit={handleUpdateSubmit}
+            data={resumeData.education[indexItem]}
+            itemIndex={indexItem}
+          />
+        )}
       </Modal>
     </>
   );
