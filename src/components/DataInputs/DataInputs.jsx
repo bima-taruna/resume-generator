@@ -35,7 +35,12 @@ function DataInputs({
         setIndexItem={setIndexItem}
       />
       <hr />
-      <Education educationData={educationData} openModal={openModal} />
+      <Education
+        educationData={educationData}
+        openModal={openModal}
+        openUpdateModal={openUpdateModal}
+        setIndexItem={setIndexItem}
+      />
     </section>
   );
 }
