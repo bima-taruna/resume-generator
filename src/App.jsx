@@ -7,6 +7,7 @@ import Modal from "./components/Modal";
 import modalTypes from "./helper/modalTypes";
 import ExperienceForm from "./components/Forms/ExperienceForm";
 import ProfileForm from "./components/Forms/ProfileForm";
+import EducationForm from "./components/Forms/EducationForm";
 function App() {
   const [resumeData, setResumeData] = useState({
     basic: data.basic,
@@ -57,7 +58,14 @@ function App() {
           };
         });
         break;
-
+      case "education-form":
+        setResumeData((prev) => {
+          return {
+            ...prev,
+            education: [...prev.education, data],
+          };
+        });
+        break;
       default:
         setResumeData((prev) => {
           return {
@@ -143,6 +151,9 @@ function App() {
         )}
         {activeModal === modalTypes.PROFILE && (
           <ProfileForm handleSubmit={handleSubmit} />
+        )}
+        {activeModal === modalTypes.EDUCATION && (
+          <EducationForm handleSubmit={handleSubmit} />
         )}
       </Modal>
       <Modal
