@@ -47,7 +47,7 @@ const data = {
       date: "August 2017 - November 2021",
       study: "Computer Science",
       type: "Bachelor Degree",
-      score: 3.82,
+      score: "3.82 GPA",
     },
   ],
 };
