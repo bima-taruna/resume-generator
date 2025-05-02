@@ -1,5 +1,6 @@
 import "../../styles/dataInputs.css";
 import BasicForm from "./BasicForm";
+import Education from "./Education";
 import Experience from "./Experience";
 import Profiles from "./Profiles";
 import Summary from "./Summary";
@@ -8,6 +9,7 @@ function DataInputs({
   summaryData,
   profilesData,
   experienceData,
+  educationData,
   onChange,
   openModal,
   openUpdateModal,
@@ -32,6 +34,8 @@ function DataInputs({
         openUpdateModal={openUpdateModal}
         setIndexItem={setIndexItem}
       />
+      <hr />
+      <Education educationData={educationData} />
     </section>
   );
 }
