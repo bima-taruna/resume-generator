@@ -1,32 +1,23 @@
 import "../../styles/resume.css";
+import ResumeEducation from "./ResumeEducation";
 import ResumeExperience from "./ResumeExperience";
 import ResumeHeader from "./ResumeHeader";
 import ResumeProfiles from "./ResumeProfiles";
 import ResumeSummary from "./ResumeSummary";
-function Resume({ basicData, summary, experienceData, profilesData }) {
+function Resume({
+  basicData,
+  summary,
+  experienceData,
+  profilesData,
+  educationData,
+}) {
   return (
     <section className="resume-canvas">
       <ResumeHeader basicData={basicData} />
       <ResumeProfiles profilesData={profilesData} />
       <ResumeSummary summary={summary} />
       <ResumeExperience experienceData={experienceData} />
-      <section id="education">
-        <h3>Education</h3>
-        <hr />
-        <ul className="edu-list">
-          <li>
-            <div className="edu-header">
-              <h3 className="edu-name">STMIK</h3>
-              <h3 className="edu-date">August 2017 - January 2024</h3>
-            </div>
-            <div className="edu-detail">
-              <h4 className="edu-study">Information System</h4>
-              <h4 className="edu-level">Bachelor Degree</h4>
-            </div>
-            <h4 className="edu-score">3.82</h4>
-          </li>
-        </ul>
-      </section>
+      <ResumeEducation educationData={educationData} />
       <section id="projects">
         <h3>Projects </h3>
         <hr />
