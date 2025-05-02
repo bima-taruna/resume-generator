@@ -41,6 +41,15 @@ const data = {
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident veritatis numquam iure ad magni tenetur explicabo, voluptates illum tempora possimus atque, illo eius neque, nesciunt mollitia qui quia nemoeos.",
     },
   ],
+  education: [
+    {
+      institution: "Harvard University",
+      date: "August 2017 - November 2021",
+      study: "Computer Science",
+      type: "Bachelor Degree",
+      score: 3.82,
+    },
+  ],
 };
 
 export default data;
