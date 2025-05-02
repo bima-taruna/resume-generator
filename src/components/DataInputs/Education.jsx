@@ -3,7 +3,8 @@ import ItemCard from "../ItemCard";
 import Button from "../Button";
 import { IoMdAdd } from "react-icons/io";
 import "../../styles/education.css";
-function Education({ educationData }) {
+import modalTypes from "../../helper/modalTypes";
+function Education({ educationData, openModal }) {
   return (
     <section id="education">
       <header>
@@ -23,6 +24,7 @@ function Education({ educationData }) {
         className={"btn-black"}
         icon={<IoMdAdd />}
         text={"Add a new Item"}
+        onClick={() => openModal(modalTypes.EDUCATION)}
       />
     </section>
   );
