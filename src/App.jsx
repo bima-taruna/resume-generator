@@ -132,7 +132,15 @@ function App() {
         });
 
         break;
-
+      case "education":
+        setResumeData((prev) => {
+          const updatedEducation = prev.education.filter((_, i) => i !== index);
+          return {
+            ...prev,
+            education: updatedEducation,
+          };
+        });
+        break;
       default:
         setResumeData((prev) => {
           const updatedProfile = prev.profiles.filter((_, i) => i !== index);
@@ -207,6 +215,7 @@ function App() {
             handleSubmit={handleUpdateSubmit}
             data={resumeData.education[indexItem]}
             itemIndex={indexItem}
+            handleDelete={handleDelete}
           />
         )}
       </Modal>
