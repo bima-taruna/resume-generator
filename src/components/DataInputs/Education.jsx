@@ -1,6 +1,8 @@
 import { PiGraduationCap } from "react-icons/pi";
 import ItemCard from "../ItemCard";
-
+import Button from "../Button";
+import { IoMdAdd } from "react-icons/io";
+import "../../styles/education.css";
 function Education({ educationData }) {
   return (
     <section id="education">
@@ -17,6 +19,11 @@ function Education({ educationData }) {
           />
         ))}
       </ul>
+      <Button
+        className={"btn-black"}
+        icon={<IoMdAdd />}
+        text={"Add a new Item"}
+      />
     </section>
   );
 }
