@@ -82,14 +82,39 @@ function App() {
     e.preventDefault();
     const formData = new FormData(e.target);
     const data = Object.fromEntries(formData.entries());
-    setResumeData((prev) => {
-      const updatedExperience = [...prev.experience];
-      updatedExperience[indexItem] = data;
-      return {
-        ...prev,
-        experience: updatedExperience,
-      };
-    });
+    const id = e.target.id;
+    switch (id) {
+      case "education-form":
+        setResumeData((prev) => {
+          const updatedEducation = [...prev.education];
+          updatedEducation[indexItem] = data;
+          return {
+            ...prev,
+            education: updatedEducation,
+          };
+        });
+        break;
+      case "profile-form":
+        setResumeData((prev) => {
+          const updatedProfile = [...prev.profiles];
+          updatedProfile[indexItem] = data;
+          return {
+            ...prev,
+            profiles: updatedProfile,
+          };
+        });
+        break;
+      default:
+        setResumeData((prev) => {
+          const updatedExperience = [...prev.experience];
+          updatedExperience[indexItem] = data;
+          return {
+            ...prev,
+            experience: updatedExperience,
+          };
+        });
+        break;
+    }
     setActiveUpdateModal(null);
   };
 
