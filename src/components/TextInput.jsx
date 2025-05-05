@@ -6,7 +6,7 @@ function TextInput({
   onChange,
   placeholder,
   defaultValue,
-  required,
+  required = false,
 }) {
   return (
     <div className="input-container">

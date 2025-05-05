@@ -1,5 +1,5 @@
 import "../styles/select.css";
-function Select({ label, name, options, defaultValue, required }) {
+function Select({ label, name, options, defaultValue, required = false }) {
   return (
     <div className="select-container">
       <label htmlFor={name}>{label}</label>
