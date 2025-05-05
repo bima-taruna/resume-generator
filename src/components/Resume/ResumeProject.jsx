@@ -1,5 +1,5 @@
 import { IoIosLink } from "react-icons/io";
-
+import "../../styles/resumeProject.css";
 function ResumeProject({ projectsData }) {
   if (!projectsData || projectsData.length < 1) {
     return null;
