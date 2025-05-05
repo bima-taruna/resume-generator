@@ -3,6 +3,7 @@ import BasicForm from "./BasicForm";
 import Education from "./Education";
 import Experience from "./Experience";
 import Profiles from "./Profiles";
+import Projects from "./Projects";
 import Summary from "./Summary";
 function DataInputs({
   basicData,
@@ -10,6 +11,7 @@ function DataInputs({
   profilesData,
   experienceData,
   educationData,
+  projectsData,
   onChange,
   openModal,
   openUpdateModal,
@@ -41,6 +43,8 @@ function DataInputs({
         openUpdateModal={openUpdateModal}
         setIndexItem={setIndexItem}
       />
+      <hr />
+      <Projects projectsData={projectsData} openModal={openModal} />
     </section>
   );
 }
