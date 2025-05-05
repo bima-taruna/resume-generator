@@ -1,0 +1,18 @@
+.edu-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.edu-list > li {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.edu-header,
+.edu-detail {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}

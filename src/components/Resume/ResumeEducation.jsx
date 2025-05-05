@@ -1,3 +1,4 @@
+import "../../styles/resumeEducation.css";
 function ResumeEducation({ educationData }) {
   if (!educationData || educationData.length < 1) {
     return null;
