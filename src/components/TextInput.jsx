@@ -18,6 +18,7 @@ function TextInput({
         onChange={onChange}
         placeholder={placeholder}
         defaultValue={defaultValue}
+        required
       />
     </div>
   );

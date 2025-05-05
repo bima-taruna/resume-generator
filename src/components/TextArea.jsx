@@ -9,6 +9,7 @@ function TextArea({ label, name, value, defaultValue, onChange }) {
         value={value}
         onChange={onChange}
         defaultValue={defaultValue}
+        required
       ></textarea>
     </div>
   );
