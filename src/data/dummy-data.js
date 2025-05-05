@@ -50,6 +50,16 @@ const data = {
       score: "3.82 GPA",
     },
   ],
+  projects: [
+    {
+      name: "My Project",
+      description: "My Project built with love",
+      date: "August 2017 - January 2018",
+      website: "https://bima-taruna.github.io/portfolio-web/",
+      summary:
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident veritatis numquam iure ad magni tenetur explicabo, voluptates illum tempora possimus atque, illo eius neque, nesciunt mollitia qui quia nemoeos.",
+    },
+  ],
 };
 
 export default data;
