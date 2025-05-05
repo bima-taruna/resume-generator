@@ -9,12 +9,14 @@ function EducationForm({ handleSubmit, data = {}, handleDelete, itemIndex }) {
           label={"Institution"}
           name={"institution"}
           defaultValue={data.institution || ""}
+          required={true}
         />
         <TextInput
           label={"Type of Study"}
           name={"type"}
           defaultValue={data.type || ""}
           placeholder={"Bachelor Degree"}
+          required={true}
         />
       </div>
       <div>
@@ -23,18 +25,21 @@ function EducationForm({ handleSubmit, data = {}, handleDelete, itemIndex }) {
           name={"study"}
           defaultValue={data.study || ""}
           placeholder={"Computer Science"}
+          required={true}
         />
         <TextInput
           label={"Score"}
           name={"score"}
           defaultValue={data.score || ""}
           placeholder={"3.80 GPA"}
+          required={true}
         />
       </div>
       <TextInput
         label={"Date or Date Range"}
         name={"date"}
         defaultValue={data.date || ""}
+        required={true}
       />
       <div className="edu-form-buttons">
         {Object.keys(data).length > 0 && (

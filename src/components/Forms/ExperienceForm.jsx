@@ -10,11 +10,13 @@ function ExperienceForm({ handleSubmit, data = {}, handleDelete, itemIndex }) {
           label={"Company"}
           name={"company"}
           defaultValue={data.company || ""}
+          required={true}
         />
         <TextInput
           label={"Position"}
           name={"position"}
           defaultValue={data.position || ""}
+          required={true}
         />
       </div>
       <div>
@@ -23,11 +25,13 @@ function ExperienceForm({ handleSubmit, data = {}, handleDelete, itemIndex }) {
           name={"date"}
           placeholder={"March 2023 - Present"}
           defaultValue={data.date || ""}
+          required={true}
         />
         <TextInput
           label={"Location"}
           name={"location"}
           defaultValue={data.location || ""}
+          required={true}
         />
       </div>
       <TextInput

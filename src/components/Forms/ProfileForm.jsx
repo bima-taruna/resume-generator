@@ -11,11 +11,13 @@ function ProfileForm({ handleSubmit, data = {}, handleDelete, itemIndex }) {
           name={"network"}
           options={["github", "linkedin"]}
           defaultValue={data.network || ""}
+          required={true}
         />
         <TextInput
           label={"Username"}
           name={"username"}
           defaultValue={data.username || ""}
+          required={true}
         />
       </div>
       <TextInput
@@ -23,6 +25,7 @@ function ProfileForm({ handleSubmit, data = {}, handleDelete, itemIndex }) {
         name={"website"}
         placeholder={"https://linkedin.com/john-doe"}
         defaultValue={data.website || ""}
+        required={true}
       />
       <div className="profile-form-buttons">
         {Object.keys(data).length > 0 && (
