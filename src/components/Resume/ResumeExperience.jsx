@@ -1,6 +1,9 @@
 import "../../styles/resumeExperience.css";
 import React from "react";
 function ResumeExperience({ experienceData }) {
+  if (!experienceData || experienceData.length < 1) {
+    return null;
+  }
   return (
     <section id="experience">
       <h3>Experience</h3>

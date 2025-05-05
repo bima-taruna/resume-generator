@@ -1,4 +1,7 @@
 function ResumeEducation({ educationData }) {
+  if (!educationData || educationData.length < 1) {
+    return null;
+  }
   return (
     <section id="education">
       <h3>Education</h3>

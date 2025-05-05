@@ -1,5 +1,8 @@
 import React from "react";
 function ResumeSummary({ summary }) {
+  if (!summary) {
+    return null;
+  }
   return (
     <section id="summary">
       <h3>Summary</h3>

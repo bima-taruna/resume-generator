@@ -1,6 +1,9 @@
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import "../../styles/resumeProfiles.css";
 function ResumeProfiles({ profilesData }) {
+  if (!profilesData || profilesData.length < 1) {
+    return null;
+  }
   return (
     <section id="profile">
       <h3>Profiles</h3>
