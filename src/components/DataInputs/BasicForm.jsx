@@ -30,7 +30,7 @@ function BasicForm({ basicData, onChange }) {
         />
         <TextInput
           label={"Phone"}
-          name={"phone"}
+          name={"phoneNumber"}
           value={basicData.phoneNumber}
           onChange={onChange}
         />
