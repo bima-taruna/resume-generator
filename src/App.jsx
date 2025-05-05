@@ -163,6 +163,7 @@ function App() {
         profilesData={resumeData.profiles}
         experienceData={resumeData.experience}
         educationData={resumeData.education}
+        projectsData={resumeData.projects}
         onChange={handleChange}
         openModal={setActiveModal}
         openUpdateModal={setActiveUpdateModal}
