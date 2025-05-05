@@ -6,6 +6,7 @@ function TextInput({
   onChange,
   placeholder,
   defaultValue,
+  required,
 }) {
   return (
     <div className="input-container">
@@ -18,7 +19,7 @@ function TextInput({
         onChange={onChange}
         placeholder={placeholder}
         defaultValue={defaultValue}
-        required
+        required={required}
       />
     </div>
   );

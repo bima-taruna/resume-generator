@@ -1,5 +1,5 @@
 import "../styles/textArea.css";
-function TextArea({ label, name, value, defaultValue, onChange }) {
+function TextArea({ label, name, value, defaultValue, onChange, required }) {
   return (
     <div className="text-area-container">
       {label && <label htmlFor={name}>{label}</label>}
@@ -9,7 +9,7 @@ function TextArea({ label, name, value, defaultValue, onChange }) {
         value={value}
         onChange={onChange}
         defaultValue={defaultValue}
-        required
+        required={required}
       ></textarea>
     </div>
   );
