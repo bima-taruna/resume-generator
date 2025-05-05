@@ -1,6 +1,6 @@
 import Button from "../Button";
 import TextInput from "../TextInput";
-
+import "../../styles/educationForm.css";
 function EducationForm({ handleSubmit, data = {}, handleDelete, itemIndex }) {
   return (
     <form id="education-form" onSubmit={handleSubmit}>
