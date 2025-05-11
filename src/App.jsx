@@ -161,6 +161,15 @@ function App() {
           };
         });
         break;
+      case "project":
+        setResumeData((prev) => {
+          const updatedProject = prev.projects.filter((_, i) => i !== index);
+          return {
+            ...prev,
+            projects: updatedProject,
+          };
+        });
+        break;
       default:
         setResumeData((prev) => {
           const updatedProfile = prev.profiles.filter((_, i) => i !== index);
