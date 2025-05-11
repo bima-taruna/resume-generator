@@ -1,9 +1,10 @@
+import "../../styles/resumeSkill.css";
 function ResumeSkills({ skillData }) {
   return (
     <section id="skills">
       <h3>Skills</h3>
       <hr />
-      <ul>
+      <ul className="skill-list">
         {skillData?.map((item, index) => (
           <li key={index}>{item}</li>
         ))}
