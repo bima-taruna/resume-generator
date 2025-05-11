@@ -8,6 +8,7 @@ import modalTypes from "./helper/modalTypes";
 import ExperienceForm from "./components/Forms/ExperienceForm";
 import ProfileForm from "./components/Forms/ProfileForm";
 import EducationForm from "./components/Forms/EducationForm";
+import ProjectForm from "./components/Forms/ProjectForm";
 function App() {
   const [resumeData, setResumeData] = useState({
     basic: data.basic,
@@ -190,6 +191,9 @@ function App() {
         )}
         {activeModal === modalTypes.EDUCATION && (
           <EducationForm handleSubmit={handleSubmit} />
+        )}
+        {activeModal === modalTypes.PROJECT && (
+          <ProjectForm handleSubmit={handleSubmit} />
         )}
       </Modal>
       <Modal
