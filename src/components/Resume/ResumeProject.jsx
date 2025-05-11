@@ -16,10 +16,12 @@ function ResumeProject({ projectsData }) {
               <h3 className="project-date">{item.date}</h3>
             </div>
             <div className="project-desc">{item.description}</div>
-            <div className="project-link">
-              <IoIosLink />
-              <a href={item.website}>{item.website}</a>
-            </div>
+            {item.website && (
+              <div className="project-link">
+                <IoIosLink />
+                <a href={item.website}>{item.website}</a>
+              </div>
+            )}
             <div className="project-summary">{item.summary}</div>
           </li>
         ))}
