@@ -114,6 +114,16 @@ function App() {
           };
         });
         break;
+      case "project-form":
+        setResumeData((prev) => {
+          const updatedProject = [...prev.projects];
+          updatedProject[indexItem] = data;
+          return {
+            ...prev,
+            projects: updatedProject,
+          };
+        });
+        break;
       default:
         setResumeData((prev) => {
           const updatedExperience = [...prev.experience];
@@ -229,6 +239,14 @@ function App() {
           <EducationForm
             handleSubmit={handleUpdateSubmit}
             data={resumeData.education[indexItem]}
+            itemIndex={indexItem}
+            handleDelete={handleDelete}
+          />
+        )}
+        {activeUpdateModal === modalTypes.PROJECT && (
+          <ProjectForm
+            handleSubmit={handleUpdateSubmit}
+            data={resumeData.projects[indexItem]}
             itemIndex={indexItem}
             handleDelete={handleDelete}
           />
