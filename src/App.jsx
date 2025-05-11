@@ -68,6 +68,14 @@ function App() {
           };
         });
         break;
+      case "project-form":
+        setResumeData((prev) => {
+          return {
+            ...prev,
+            projects: [...prev.projects, data],
+          };
+        });
+        break;
       default:
         setResumeData((prev) => {
           return {
