@@ -17,6 +17,7 @@ function App() {
     profiles: data.profiles,
     education: data.education,
     projects: data.projects,
+    skills: data.skills,
   });
 
   const [activeModal, setActiveModal] = useState(null);
@@ -204,6 +205,7 @@ function App() {
         profilesData={resumeData.profiles}
         educationData={resumeData.education}
         projectsData={resumeData.projects}
+        skillData={resumeData.skills}
       />
       <Modal
         headerText={"+ Create a new item"}
