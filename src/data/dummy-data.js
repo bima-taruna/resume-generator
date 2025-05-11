@@ -60,6 +60,15 @@ const data = {
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident veritatis numquam iure ad magni tenetur explicabo, voluptates illum tempora possimus atque, illo eius neque, nesciunt mollitia qui quia nemoeos.",
     },
   ],
+  skills: [
+    "Javascript",
+    "HTML",
+    "CSS",
+    "PHP",
+    "Laravel",
+    "Android Studio",
+    "React JS",
+  ],
 };
 
 export default data;
