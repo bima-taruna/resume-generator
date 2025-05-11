@@ -1,7 +1,7 @@
 import Button from "../Button";
 import TextArea from "../TextArea";
 import TextInput from "../TextInput";
-
+import "../../styles/projectForm.css";
 function ProjectForm({ handleSubmit, data = {}, handleDelete, itemIndex }) {
   return (
     <form id="project-form" onSubmit={handleSubmit}>
