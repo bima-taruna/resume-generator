@@ -4,11 +4,11 @@ import DataInputs from "./components/DataInputs/DataInputs";
 import { useState } from "react";
 import data from "./data/dummy-data";
 import Modal from "./components/Modal";
-import modalTypes from "./helper/modalTypes";
 import ExperienceForm from "./components/Forms/ExperienceForm";
 import ProfileForm from "./components/Forms/ProfileForm";
 import EducationForm from "./components/Forms/EducationForm";
 import ProjectForm from "./components/Forms/ProjectForm";
+import CustomModal from "./components/CustomModal";
 function App() {
   const [resumeData, setResumeData] = useState({
     basic: data.basic,
@@ -208,62 +208,25 @@ function App() {
         projectsData={resumeData.projects}
         skillData={resumeData.skills}
       />
-      <Modal
-        headerText={"+ Create a new item"}
+      <CustomModal
+        type={activeModal}
         isOpen={activeModal !== null}
         onClose={() => setActiveModal(null)}
-      >
-        {activeModal === modalTypes.EXPERIENCE && (
-          <ExperienceForm handleSubmit={handleSubmit} />
-        )}
-        {activeModal === modalTypes.PROFILE && (
-          <ProfileForm handleSubmit={handleSubmit} />
-        )}
-        {activeModal === modalTypes.EDUCATION && (
-          <EducationForm handleSubmit={handleSubmit} />
-        )}
-        {activeModal === modalTypes.PROJECT && (
-          <ProjectForm handleSubmit={handleSubmit} />
-        )}
-      </Modal>
-      <Modal
-        headerText={"Update an existing item"}
+        handleSubmit={handleSubmit}
+      />
+      <CustomModal
+        type={activeUpdateModal}
         isOpen={activeUpdateModal !== null}
         onClose={() => setActiveUpdateModal(null)}
-      >
-        {activeUpdateModal === modalTypes.EXPERIENCE && (
-          <ExperienceForm
-            handleSubmit={handleUpdateSubmit}
-            data={resumeData.experience[indexItem]}
-            itemIndex={indexItem}
-            handleDelete={handleDelete}
-          />
-        )}
-        {activeUpdateModal === modalTypes.PROFILE && (
-          <ProfileForm
-            handleSubmit={handleUpdateSubmit}
-            data={resumeData.profiles[indexItem]}
-            itemIndex={indexItem}
-            handleDelete={handleDelete}
-          />
-        )}
-        {activeUpdateModal === modalTypes.EDUCATION && (
-          <EducationForm
-            handleSubmit={handleUpdateSubmit}
-            data={resumeData.education[indexItem]}
-            itemIndex={indexItem}
-            handleDelete={handleDelete}
-          />
-        )}
-        {activeUpdateModal === modalTypes.PROJECT && (
-          <ProjectForm
-            handleSubmit={handleUpdateSubmit}
-            data={resumeData.projects[indexItem]}
-            itemIndex={indexItem}
-            handleDelete={handleDelete}
-          />
-        )}
-      </Modal>
+        handleSubmit={handleUpdateSubmit}
+        data={
+          activeUpdateModal && indexItem !== null
+            ? resumeData[activeUpdateModal?.toLowerCase()][indexItem]
+            : null
+        }
+        itemIndex={indexItem}
+        handleDelete={handleDelete}
+      />
     </>
   );
 }
