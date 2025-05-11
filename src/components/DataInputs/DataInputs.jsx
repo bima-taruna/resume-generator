@@ -4,6 +4,7 @@ import Education from "./Education";
 import Experience from "./Experience";
 import Profiles from "./Profiles";
 import Projects from "./Projects";
+import Skills from "./Skills";
 import Summary from "./Summary";
 function DataInputs({
   basicData,
@@ -12,6 +13,7 @@ function DataInputs({
   experienceData,
   educationData,
   projectsData,
+  skillData,
   onChange,
   openModal,
   openUpdateModal,
@@ -46,6 +48,13 @@ function DataInputs({
       <hr />
       <Projects
         projectsData={projectsData}
+        openModal={openModal}
+        openUpdateModal={openUpdateModal}
+        setIndexItem={setIndexItem}
+      />
+      <hr />
+      <Skills
+        skillData={skillData}
         openModal={openModal}
         openUpdateModal={openUpdateModal}
         setIndexItem={setIndexItem}
