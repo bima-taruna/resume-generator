@@ -3,7 +3,7 @@ import ItemCard from "../ItemCard";
 import modalTypes from "../../helper/modalTypes";
 import Button from "../Button";
 import { IoMdAdd } from "react-icons/io";
-
+import "../../styles/skills.css";
 function Skills({ skillData, openModal, openUpdateModal, setIndexItem }) {
   return (
     <section id="skill">
