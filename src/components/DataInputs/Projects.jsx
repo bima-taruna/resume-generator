@@ -4,7 +4,7 @@ import Button from "../Button";
 import { IoMdAdd } from "react-icons/io";
 import modalTypes from "../../helper/modalTypes";
 import "../../styles/projects.css";
-function Projects({ projectsData, openModal }) {
+function Projects({ projectsData, openModal, openUpdateModal, setIndexItem }) {
   return (
     <section id="projects">
       <header>
@@ -17,6 +17,10 @@ function Projects({ projectsData, openModal }) {
             key={index}
             title={item.name}
             subtitle={item.description}
+            handleClick={() => {
+              openUpdateModal(modalTypes.PROJECT);
+              setIndexItem(index);
+            }}
           />,
         ])}
       </ul>
