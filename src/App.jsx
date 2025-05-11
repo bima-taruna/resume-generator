@@ -193,6 +193,7 @@ function App() {
         experienceData={resumeData.experience}
         educationData={resumeData.education}
         projectsData={resumeData.projects}
+        skillData={resumeData.skills}
         onChange={handleChange}
         openModal={setActiveModal}
         openUpdateModal={setActiveUpdateModal}
