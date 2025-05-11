@@ -6,6 +6,7 @@ import ResumeHeader from "./ResumeHeader";
 import ResumeProfiles from "./ResumeProfiles";
 import ResumeSummary from "./ResumeSummary";
 import ResumeProject from "./ResumeProject";
+import ResumeSkills from "./ResumeSkills";
 function Resume({
   basicData,
   summary,
@@ -13,6 +14,7 @@ function Resume({
   profilesData,
   educationData,
   projectsData,
+  skillData,
 }) {
   return (
     <section className="resume-canvas">
@@ -22,16 +24,7 @@ function Resume({
       <ResumeExperience experienceData={experienceData} />
       <ResumeEducation educationData={educationData} />
       <ResumeProject projectsData={projectsData} />
-      <section id="skills">
-        <h3>Skills</h3>
-        <hr />
-        <ul>
-          <li>HTML</li>
-          <li>Javascript</li>
-          <li>CSS</li>
-          <li>PHP</li>
-        </ul>
-      </section>
+      <ResumeSkills skillData={skillData} />
       <section id="certifications">
         <h3>Certifications</h3>
         <hr />
