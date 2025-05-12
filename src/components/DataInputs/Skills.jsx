@@ -27,7 +27,7 @@ function Skills({ skillData, openModal, openUpdateModal, setIndexItem }) {
         className={"btn-black"}
         icon={<IoMdAdd />}
         text={"Add a new item"}
-        onClick={() => openModal(modalTypes.PROJECT)}
+        onClick={() => openModal(modalTypes.SKILL)}
       />
     </section>
   );
