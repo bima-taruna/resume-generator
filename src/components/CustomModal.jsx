@@ -2,6 +2,7 @@ import EducationForm from "./Forms/EducationForm";
 import ExperienceForm from "./Forms/ExperienceForm";
 import ProfileForm from "./Forms/ProfileForm";
 import ProjectForm from "./Forms/ProjectForm";
+import SkillForm from "./Forms/SkillForm";
 import Modal from "./Modal";
 
 function CustomModal({
@@ -46,6 +47,15 @@ function CustomModal({
       case "projects":
         return (
           <ProjectForm
+            handleSubmit={handleSubmit}
+            data={data}
+            itemIndex={itemIndex}
+            handleDelete={handleDelete}
+          />
+        );
+      case "skills":
+        return (
+          <SkillForm
             handleSubmit={handleSubmit}
             data={data}
             itemIndex={itemIndex}
