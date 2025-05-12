@@ -6,6 +6,7 @@ import Modal from "./Modal";
 
 function CustomModal({
   type,
+  modalType,
   isOpen,
   onClose,
   handleSubmit,
@@ -59,7 +60,9 @@ function CustomModal({
   return (
     <Modal
       headerText={
-        type === "CREATE" ? "+ Create a new item" : "Update an existing item"
+        modalType === "CREATE"
+          ? "+ Create a new item"
+          : "Update an existing item"
       }
       isOpen={isOpen}
       onClose={onClose}
