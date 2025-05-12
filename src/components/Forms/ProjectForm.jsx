@@ -4,7 +4,7 @@ import TextInput from "../TextInput";
 import "../../styles/projectForm.css";
 function ProjectForm({ handleSubmit, data = {}, handleDelete, itemIndex }) {
   return (
-    <form id="project-form" onSubmit={handleSubmit}>
+    <form id="projects-form" onSubmit={handleSubmit}>
       <div>
         <TextInput
           label={"Name"}
@@ -42,7 +42,7 @@ function ProjectForm({ handleSubmit, data = {}, handleDelete, itemIndex }) {
           <Button
             className={"btn-red"}
             text={"Delete"}
-            onClick={() => handleDelete("project", itemIndex)}
+            onClick={() => handleDelete("projects", itemIndex)}
           />
         )}
         <Button

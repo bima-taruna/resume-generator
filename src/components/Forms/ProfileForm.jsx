@@ -4,7 +4,7 @@ import TextInput from "../TextInput";
 import "../../styles/profileForm.css";
 function ProfileForm({ handleSubmit, data = {}, handleDelete, itemIndex }) {
   return (
-    <form id="profile-form" onSubmit={handleSubmit}>
+    <form id="profiles-form" onSubmit={handleSubmit}>
       <div>
         <Select
           label={"Network"}
@@ -32,7 +32,7 @@ function ProfileForm({ handleSubmit, data = {}, handleDelete, itemIndex }) {
           <Button
             className={"btn-red"}
             text={"Delete"}
-            onClick={() => handleDelete("profile", itemIndex)}
+            onClick={() => handleDelete("profiles", itemIndex)}
           />
         )}
         <Button

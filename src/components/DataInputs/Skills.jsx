@@ -6,7 +6,7 @@ import { IoMdAdd } from "react-icons/io";
 import "../../styles/skills.css";
 function Skills({ skillData, openModal, openUpdateModal, setIndexItem }) {
   return (
-    <section id="skill">
+    <section id="skills">
       <header>
         <GiSkills />
         <h2>Skills</h2>
