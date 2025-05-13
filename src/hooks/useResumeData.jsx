@@ -45,7 +45,10 @@ const useResumeData = () => {
     const data = Object.fromEntries(formData.entries());
     setResumeData((prev) => ({
       ...prev,
-      [id.split("-")[0]]: [...prev[id.split("-")[0]], data],
+      [id.split("-")[0]]: [
+        ...prev[id.split("-")[0]],
+        id === "skills-form" ? data.name : data,
+      ],
     }));
     setActiveModal(null);
   };
@@ -57,7 +60,7 @@ const useResumeData = () => {
     const id = e.target.id;
     setResumeData((prev) => {
       const updatedData = [...prev[id.split("-")[0]]];
-      updatedData[indexItem] = data;
+      updatedData[indexItem] = id === "skills-form" ? data.name : data;
       return { ...prev, [id.split("-")[0]]: updatedData };
     });
     setActiveUpdateModal(null);
