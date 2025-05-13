@@ -1,9 +1,0 @@
-.data-inputs > #profiles {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-}
-
-.data-inputs > #profiles > .btn-black {
-  align-self: flex-end;
-}
