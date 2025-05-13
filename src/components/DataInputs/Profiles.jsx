@@ -3,7 +3,6 @@ import ItemCard from "../ItemCard";
 import Button from "../Button";
 import { IoMdAdd } from "react-icons/io";
 import modalTypes from "../../helper/modalTypes";
-import "../../styles/profiles.css";
 
 function Profiles({ profilesData, openModal, openUpdateModal, setIndexItem }) {
   return (

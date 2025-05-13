@@ -2,7 +2,6 @@ import { IoBriefcaseOutline } from "react-icons/io5";
 import ItemCard from "../ItemCard";
 import Button from "../Button";
 import { IoMdAdd } from "react-icons/io";
-import "../../styles/experience.css";
 import modalTypes from "../../helper/modalTypes";
 function Experience({
   experienceData,

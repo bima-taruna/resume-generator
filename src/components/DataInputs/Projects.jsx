@@ -3,7 +3,6 @@ import ItemCard from "../ItemCard";
 import Button from "../Button";
 import { IoMdAdd } from "react-icons/io";
 import modalTypes from "../../helper/modalTypes";
-import "../../styles/projects.css";
 function Projects({ projectsData, openModal, openUpdateModal, setIndexItem }) {
   return (
     <section id="projects">

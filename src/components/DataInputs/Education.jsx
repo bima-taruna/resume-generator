@@ -2,7 +2,6 @@ import { PiGraduationCap } from "react-icons/pi";
 import ItemCard from "../ItemCard";
 import Button from "../Button";
 import { IoMdAdd } from "react-icons/io";
-import "../../styles/education.css";
 import modalTypes from "../../helper/modalTypes";
 function Education({
   educationData,
