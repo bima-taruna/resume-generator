@@ -10,6 +10,7 @@ const useResumeData = () => {
     education: data.education,
     projects: data.projects,
     skills: data.skills,
+    certifications: data.certifications,
   });
   const [activeModal, setActiveModal] = useState(null);
   const [activeUpdateModal, setActiveUpdateModal] = useState(null);
