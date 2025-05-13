@@ -1,6 +1,6 @@
 import TextArea from "../TextArea";
 import TextInput from "../TextInput";
-import "../../styles/experienceForm.css";
+import "../../styles/form.css";
 import Button from "../Button";
 function ExperienceForm({ handleSubmit, data = {}, handleDelete, itemIndex }) {
   return (

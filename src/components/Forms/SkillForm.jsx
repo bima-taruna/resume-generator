@@ -1,6 +1,6 @@
 import Button from "../Button";
 import TextInput from "../TextInput";
-
+import "../../styles/form.css";
 function SkillForm({ handleSubmit, data, handleDelete, itemIndex }) {
   return (
     <form id="skills-form" onSubmit={handleSubmit}>
