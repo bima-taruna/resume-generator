@@ -1,0 +1,27 @@
+.cert-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+li {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.cert-header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.cert-body {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.cert-issuer {
+  font-size: 0.875rem;
+  font-weight: 500;
+}

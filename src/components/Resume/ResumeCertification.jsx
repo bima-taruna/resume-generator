@@ -1,3 +1,4 @@
+import "../../styles/resumeCertification.css";
 function ResumeCertificiation({ certificationData }) {
   if (!certificationData || certificationData.length < 1) {
     return null;
