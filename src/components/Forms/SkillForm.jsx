@@ -15,7 +15,7 @@ function SkillForm({ handleSubmit, data, handleDelete, itemIndex }) {
           <Button
             className={"btn-red"}
             text={"Delete"}
-            onClick={() => handleDelete("profiles", itemIndex)}
+            onClick={() => handleDelete("skills", itemIndex)}
           />
         )}
         <Button
