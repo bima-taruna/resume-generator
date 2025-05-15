@@ -1,13 +1,12 @@
-import { IoBriefcaseOutline, IoExtensionPuzzleOutline } from "react-icons/io5";
+import {
+  IoBriefcaseOutline,
+  IoExtensionPuzzleOutline,
+  IoLanguage,
+} from "react-icons/io5";
 import "../../styles/dataInputs.css";
 import BasicForm from "./BasicForm";
-import Certifications from "./Certifications";
-import Education from "./Education";
-import Experience from "./Experience";
 import Profiles from "./Profiles";
-import Projects from "./Projects";
 import SectionDataInputs from "./SectionDataInputs";
-import Skills from "./Skills";
 import Summary from "./Summary";
 import modalTypes from "../../helper/modalTypes";
 import ItemCard from "../ItemCard";
@@ -22,6 +21,7 @@ function DataInputs({
   projectsData,
   skillData,
   certificationData,
+  languageData,
   onChange,
   openModal,
   openUpdateModal,
@@ -126,6 +126,24 @@ function DataInputs({
             subtitle={item.issuer}
             handleClick={() => {
               openUpdateModal(modalTypes.CERTIFICATION);
+              setIndexItem(index);
+            }}
+          />
+        ))}
+      </SectionDataInputs>
+      <SectionDataInputs
+        icon={<IoLanguage />}
+        sectionId={"languages"}
+        sectionTitle={"Languages"}
+        openModal={openModal}
+        modalTypes={modalTypes.LANGUAGE}
+      >
+        {languageData?.map((item, index) => (
+          <ItemCard
+            key={index}
+            title={item}
+            handleClick={() => {
+              openUpdateModal(modalTypes.LANGUAGE);
               setIndexItem(index);
             }}
           />
