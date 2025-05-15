@@ -11,6 +11,7 @@ const useResumeData = () => {
     projects: data.projects,
     skills: data.skills,
     certifications: data.certifications,
+    languages: data.languages,
   });
   const [activeModal, setActiveModal] = useState(null);
   const [activeUpdateModal, setActiveUpdateModal] = useState(null);
