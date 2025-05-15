@@ -30,3 +30,7 @@ form > div {
 #skills-form > .skills-form-buttons {
   align-self: flex-end;
 }
+
+#certifications-form > .cert-form-buttons {
+  align-self: flex-end;
+}
