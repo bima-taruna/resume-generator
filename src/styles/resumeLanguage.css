@@ -1,0 +1,10 @@
+.language-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.language-list > li {
+  font-size: 0.875rem;
+  font-weight: 500;
+}
