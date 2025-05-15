@@ -1,3 +1,4 @@
+import CertificationForm from "./Forms/CertificationForm";
 import EducationForm from "./Forms/EducationForm";
 import ExperienceForm from "./Forms/ExperienceForm";
 import ProfileForm from "./Forms/ProfileForm";
@@ -56,6 +57,15 @@ function CustomModal({
       case "skills":
         return (
           <SkillForm
+            handleSubmit={handleSubmit}
+            data={data}
+            itemIndex={itemIndex}
+            handleDelete={handleDelete}
+          />
+        );
+      case "certifications":
+        return (
+          <CertificationForm
             handleSubmit={handleSubmit}
             data={data}
             itemIndex={itemIndex}
