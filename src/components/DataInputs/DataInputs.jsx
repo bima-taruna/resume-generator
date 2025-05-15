@@ -1,3 +1,4 @@
+import { IoBriefcaseOutline, IoExtensionPuzzleOutline } from "react-icons/io5";
 import "../../styles/dataInputs.css";
 import BasicForm from "./BasicForm";
 import Certifications from "./Certifications";
@@ -5,8 +6,13 @@ import Education from "./Education";
 import Experience from "./Experience";
 import Profiles from "./Profiles";
 import Projects from "./Projects";
+import SectionDataInputs from "./SectionDataInputs";
 import Skills from "./Skills";
 import Summary from "./Summary";
+import modalTypes from "../../helper/modalTypes";
+import ItemCard from "../ItemCard";
+import { PiCertificateLight, PiGraduationCap } from "react-icons/pi";
+import { GiSkills } from "react-icons/gi";
 function DataInputs({
   basicData,
   summaryData,
@@ -24,50 +30,107 @@ function DataInputs({
   return (
     <section className="data-inputs">
       <BasicForm basicData={basicData} onChange={onChange} />
-      <hr />
       <Summary summaryData={summaryData} onChange={onChange} />
-      <hr />
       <Profiles
         profilesData={profilesData}
         openModal={openModal}
         openUpdateModal={openUpdateModal}
         setIndexItem={setIndexItem}
       />
-      <hr />
-      <Experience
-        experienceData={experienceData}
+      <SectionDataInputs
+        icon={<IoBriefcaseOutline />}
+        sectionId={"experience"}
+        sectionTitle={"Experience"}
         openModal={openModal}
-        openUpdateModal={openUpdateModal}
-        setIndexItem={setIndexItem}
-      />
-      <hr />
-      <Education
-        educationData={educationData}
+        modalTypes={modalTypes.EXPERIENCE}
+      >
+        {experienceData?.map((item, index) => (
+          <ItemCard
+            key={index}
+            title={item.company}
+            subtitle={item.position}
+            handleClick={() => {
+              openUpdateModal(modalTypes.EXPERIENCE);
+              setIndexItem(index);
+            }}
+          />
+        ))}
+      </SectionDataInputs>
+      <SectionDataInputs
+        icon={<PiGraduationCap />}
+        sectionId={"education"}
+        sectionTitle={"Education"}
         openModal={openModal}
-        openUpdateModal={openUpdateModal}
-        setIndexItem={setIndexItem}
-      />
-      <hr />
-      <Projects
-        projectsData={projectsData}
+        modalTypes={modalTypes.EDUCATION}
+      >
+        {educationData?.map((item, index) => (
+          <ItemCard
+            key={index}
+            title={item.institution}
+            subtitle={item.study}
+            handleClick={() => {
+              openUpdateModal(modalTypes.EDUCATION);
+              setIndexItem(index);
+            }}
+          />
+        ))}
+      </SectionDataInputs>
+      <SectionDataInputs
+        icon={<IoExtensionPuzzleOutline />}
+        sectionId={"projects"}
+        sectionTitle={"Projects"}
         openModal={openModal}
-        openUpdateModal={openUpdateModal}
-        setIndexItem={setIndexItem}
-      />
-      <hr />
-      <Skills
-        skillData={skillData}
+        modalTypes={modalTypes.PROJECT}
+      >
+        {projectsData?.map((item, index) => (
+          <ItemCard
+            key={index}
+            title={item.name}
+            subtitle={item.description}
+            handleClick={() => {
+              openUpdateModal(modalTypes.PROJECT);
+              setIndexItem(index);
+            }}
+          />
+        ))}
+      </SectionDataInputs>
+      <SectionDataInputs
+        icon={<GiSkills />}
+        sectionId={"skills"}
+        sectionTitle={"Skills"}
         openModal={openModal}
-        openUpdateModal={openUpdateModal}
-        setIndexItem={setIndexItem}
-      />
-      <hr />
-      <Certifications
-        certificationData={certificationData}
+        modalTypes={modalTypes.SKILL}
+      >
+        {skillData?.map((item, index) => (
+          <ItemCard
+            key={index}
+            title={item}
+            handleClick={() => {
+              openUpdateModal(modalTypes.SKILL);
+              setIndexItem(index);
+            }}
+          />
+        ))}
+      </SectionDataInputs>
+      <SectionDataInputs
+        icon={<PiCertificateLight />}
+        sectionId={"certifications"}
+        sectionTitle={"Certifications"}
         openModal={openModal}
-        openUpdateModal={openUpdateModal}
-        setIndexItem={setIndexItem}
-      />
+        modalTypes={modalTypes.CERTIFICATION}
+      >
+        {certificationData?.map((item, index) => (
+          <ItemCard
+            key={index}
+            title={item.name}
+            subtitle={item.issuer}
+            handleClick={() => {
+              openUpdateModal(modalTypes.CERTIFICATION);
+              setIndexItem(index);
+            }}
+          />
+        ))}
+      </SectionDataInputs>
     </section>
   );
 }
