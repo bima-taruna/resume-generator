@@ -4,6 +4,7 @@ const modalTypes = Object.freeze({
   EDUCATION: "education",
   PROJECT: "projects",
   SKILL: "skills",
+  CERTIFICATION: "certifications",
 });
 
 export default modalTypes;
