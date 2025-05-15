@@ -3,6 +3,7 @@ import Resume from "./components/Resume/Resume";
 import DataInputs from "./components/DataInputs/DataInputs";
 import CustomModal from "./components/CustomModal";
 import useResumeData from "./hooks/useResumeData";
+import Navbar from "./components/Navbar";
 function App() {
   const {
     resumeData,
@@ -20,6 +21,7 @@ function App() {
 
   return (
     <>
+      <Navbar />
       <DataInputs
         basicData={resumeData.basic}
         summaryData={resumeData.summary}
