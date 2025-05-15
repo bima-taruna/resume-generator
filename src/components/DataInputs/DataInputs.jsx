@@ -1,5 +1,6 @@
 import "../../styles/dataInputs.css";
 import BasicForm from "./BasicForm";
+import Certifications from "./Certifications";
 import Education from "./Education";
 import Experience from "./Experience";
 import Profiles from "./Profiles";
@@ -14,6 +15,7 @@ function DataInputs({
   educationData,
   projectsData,
   skillData,
+  certificationData,
   onChange,
   openModal,
   openUpdateModal,
@@ -55,6 +57,13 @@ function DataInputs({
       <hr />
       <Skills
         skillData={skillData}
+        openModal={openModal}
+        openUpdateModal={openUpdateModal}
+        setIndexItem={setIndexItem}
+      />
+      <hr />
+      <Certifications
+        certificationData={certificationData}
         openModal={openModal}
         openUpdateModal={openUpdateModal}
         setIndexItem={setIndexItem}
