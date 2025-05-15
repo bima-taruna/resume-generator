@@ -79,6 +79,7 @@ const data = {
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident veritatis numquam iure ad magni tenetur explicabo, voluptates illum tempora possimus atque, illo eius neque, nesciunt mollitia qui quia nemoeos.",
     },
   ],
+  languages: ["Indonesia", "English", "Japan", "Deustch"],
 };
 
 export default data;
