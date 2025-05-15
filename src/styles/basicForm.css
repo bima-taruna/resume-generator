@@ -6,5 +6,11 @@
 
 #basics > div {
   display: flex;
+  width: 100%;
   gap: 0.5rem;
+}
+
+#basics > div > * {
+  flex: 1 1 0;
+  min-width: 0;
 }

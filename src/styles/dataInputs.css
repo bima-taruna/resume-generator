@@ -1,9 +1,19 @@
 .data-inputs {
+  background-color: black;
+  position: fixed;
   flex: 1;
   padding: 1.5rem;
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
+  top: 0;
+  left: 0;
+  width: 400px;
+  height: 100vh;
+  overflow-y: auto;
+  z-index: 100;
+  scrollbar-width: thin;
+  scrollbar-color: #757575 #000000;
 }
 .data-inputs > section {
   display: flex;
@@ -27,4 +37,18 @@
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
+}
+
+.data-inputs::-webkit-scrollbar {
+  width: 8px;
+  background: #111; /* track color */
+}
+
+.data-inputs::-webkit-scrollbar-thumb {
+  background: #222; /* thumb color */
+  border-radius: 4px;
+}
+
+.data-inputs::-webkit-scrollbar-thumb:hover {
+  background: #333;
 }
