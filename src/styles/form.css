@@ -34,3 +34,7 @@ form > div {
 #certifications-form > .cert-form-buttons {
   align-self: flex-end;
 }
+
+#languages-form > .languages-form-buttons {
+  align-self: flex-end;
+}
