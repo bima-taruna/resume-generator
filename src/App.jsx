@@ -20,7 +20,7 @@ function App() {
 
   return (
     <>
-      <Navbar />
+      <Navbar resumeData={resumeData} />
       <DataInputs
         basicData={resumeData.basic}
         summaryData={resumeData.summary}
