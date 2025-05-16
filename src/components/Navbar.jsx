@@ -1,10 +1,11 @@
 import "../styles/navbar.css";
-function Navbar() {
+import PdfDownload from "./PDF/PdfDownload";
+function Navbar({ resumeData }) {
   return (
     <nav>
       <h2>RESUME GENERATOR</h2>
       <div>
-        <button>download</button>
+        <PdfDownload resumeData={resumeData} />
       </div>
     </nav>
   );
