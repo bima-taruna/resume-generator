@@ -4,6 +4,7 @@ import ResumePDF from "./ResumePDF";
 const PdfDownload = ({ resumeData }) => (
   <div>
     <PDFDownloadLink
+      style={{ color: "black", textDecoration: "none" }}
       document={<ResumePDF {...resumeData} />}
       fileName="resume.pdf"
     >
