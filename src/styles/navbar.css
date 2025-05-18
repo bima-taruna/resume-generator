@@ -38,3 +38,13 @@ nav button:hover {
   background: #222;
   color: #fff;
 }
+
+.pdf-download {
+  display: flex;
+  gap: 0.5rem;
+  padding: 1rem;
+  background-color: #fff;
+  color: black;
+  text-decoration: none;
+  border-radius: 0.5rem;
+}
