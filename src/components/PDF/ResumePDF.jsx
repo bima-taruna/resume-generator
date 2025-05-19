@@ -1,48 +1,15 @@
-import React from "react";
 import {
   Page,
   Text,
   View,
   Document,
-  StyleSheet,
   Link,
+  Svg,
+  Path,
 } from "@react-pdf/renderer";
 
-// Example: You should import or define your own subcomponents for each section if you want to keep logic separated
-
-const styles = StyleSheet.create({
-  page: {
-    padding: 32,
-    fontSize: 12,
-    fontFamily: "Helvetica",
-    color: "#222",
-  },
-  section: {
-    marginBottom: 16,
-  },
-  header: {
-    fontSize: 22,
-    fontWeight: "bold",
-    marginBottom: 8,
-  },
-  subHeader: {
-    fontSize: 16,
-    fontWeight: "bold",
-    marginBottom: 4,
-  },
-  list: {
-    margin: 0,
-    padding: 0,
-  },
-  listItem: {
-    marginBottom: 4,
-  },
-  link: {
-    color: "#0077cc",
-    textDecoration: "underline",
-  },
-});
-
+import styles from "../../styles/pdfStylesheet";
+import Location from "./Icons/Location";
 // Main PDF Document
 const ResumePDF = ({
   basic,
@@ -61,16 +28,27 @@ const ResumePDF = ({
       <View style={styles.section}>
         <Text style={styles.header}>{basic.fullName}</Text>
         <Text>{basic.headline}</Text>
-        <Text>
-          {basic.location} | {basic.phoneNumber} | {basic.email}
-        </Text>
-        {basic.website && (
-          <Link src={basic.website} style={styles.link}>
-            {basic.website}
-          </Link>
-        )}
+        <View style={styles.headerAdditional}>
+          <View style={styles.textWithIcon}>
+            <Location />
+            <Text>{basic.location} | </Text>
+          </View>
+          <View style={styles.textWithIcon}>
+            <Text>{basic.phoneNumber} | </Text>
+          </View>
+          <View style={styles.textWithIcon}>
+            <Text>{basic.email}</Text>
+          </View>
+          <View style={styles.textWithIcon}>
+            {basic.website && (
+              <Link src={basic.website} style={styles.link}>
+                | {basic.website}
+              </Link>
+            )}
+          </View>
+        </View>
       </View>
-
+      <hr />
       {/* Profiles */}
       {profiles?.length > 0 && (
         <View style={styles.section}>
