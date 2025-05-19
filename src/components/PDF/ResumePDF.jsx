@@ -6,10 +6,16 @@ import {
   Link,
   Svg,
   Path,
+  Font,
 } from "@react-pdf/renderer";
 
 import styles from "../../styles/pdfStylesheet";
 import Location from "./Icons/Location";
+
+Font.register({
+  family: "Source Serif Pro",
+  src: "http://fonts.gstatic.com/s/sourceserifpro/v4/CeUM4np2c42DV49nanp55aqQQDHDiKO-LH8MFmRo0b0.ttf",
+});
 // Main PDF Document
 const ResumePDF = ({
   basic,
