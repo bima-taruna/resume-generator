@@ -11,10 +11,12 @@ const styles = StyleSheet.create({
     marginTop: 5,
     flexDirection: "row",
     alignItems: "center",
+    gap: 4,
   },
   textWithIcon: {
     flexDirection: "row",
     alignItems: "center",
+    gap: 4,
   },
   section: {
     marginBottom: 16, // matches section gap
