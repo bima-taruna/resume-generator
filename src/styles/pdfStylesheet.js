@@ -43,16 +43,35 @@ const styles = StyleSheet.create({
     lineHeight: 1.25,
     marginBottom: 4,
   },
-  list: {
-    margin: 0,
-    padding: 0,
-    gap: 16, // matches .cert-list, .exp-list, etc. gap: 1rem (16px)
+  profileList: {
+    flexDirection: "column",
+    gap: 7,
   },
-  listItem: {
-    marginBottom: 4,
+  expList: {
+    flexDirection: "column",
+    gap: 16,
+  },
+  expItem: {
+    flexDirection: "column",
+    gap: 4,
+  },
+  sectionHeader: {
+    flexDirection: "row",
+    justifyContent: "space-between",
+    fontWeight: "bold",
+    fontSize: 14,
+  },
+  sectionDetail: {
+    fontWeight: "bold",
     fontSize: 12,
-    fontWeight: 500, // matches .skill-list > li, .language-list > li, etc.
+    flexDirection: "row",
+    justifyContent: "space-between",
   },
+  // listItem: {
+  //   marginBottom: 4,
+  //   fontSize: 12,
+  //   fontWeight: 500, // matches .skill-list > li, .language-list > li, etc.
+  // },
   link: {
     color: "#0077cc",
     textDecoration: "underline",
