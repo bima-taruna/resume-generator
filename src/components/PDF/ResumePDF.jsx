@@ -1,16 +1,10 @@
-import {
-  Page,
-  Text,
-  View,
-  Document,
-  Link,
-  Svg,
-  Path,
-  Font,
-} from "@react-pdf/renderer";
+import { Page, Text, View, Document, Link, Font } from "@react-pdf/renderer";
 
 import styles from "../../styles/pdfStylesheet";
 import Location from "./Icons/Location";
+import PhoneIcon from "./Icons/PhoneIcon";
+import EmailIcon from "./Icons/EmailIcon";
+import LinkIcon from "./Icons/LinkIcon";
 
 Font.register({
   family: "Source Serif Pro",
@@ -40,16 +34,22 @@ const ResumePDF = ({
             <Text>{basic.location} | </Text>
           </View>
           <View style={styles.textWithIcon}>
+            <PhoneIcon />
             <Text>{basic.phoneNumber} | </Text>
           </View>
           <View style={styles.textWithIcon}>
+            <EmailIcon />
             <Text>{basic.email}</Text>
           </View>
           <View style={styles.textWithIcon}>
             {basic.website && (
-              <Link src={basic.website} style={styles.link}>
-                | {basic.website}
-              </Link>
+              <>
+                <Text> |</Text>
+                <LinkIcon />
+                <Link src={basic.website} style={styles.link}>
+                  Website
+                </Link>
+              </>
             )}
           </View>
         </View>
