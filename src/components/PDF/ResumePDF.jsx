@@ -54,12 +54,10 @@ const ResumePDF = ({
           </View>
         </View>
       </View>
-      <hr />
-      {/* Profiles */}
       {profiles?.length > 0 && (
         <View style={styles.section}>
           <Text style={styles.subHeader}>Profiles</Text>
-          <View style={styles.list}>
+          <View style={styles.profileList}>
             {profiles.map((profile, idx) => (
               <Text key={idx} style={styles.listItem}>
                 {profile.network}:{" "}
@@ -84,20 +82,26 @@ const ResumePDF = ({
       {experience?.length > 0 && (
         <View style={styles.section}>
           <Text style={styles.subHeader}>Experience</Text>
-          {experience.map((exp, idx) => (
-            <View key={idx} style={styles.listItem}>
-              <Text>
-                <b>{exp.company}</b> | {exp.position} | {exp.date}
-              </Text>
-              <Text>{exp.location}</Text>
-              {exp.website && (
-                <Link src={exp.website} style={styles.link}>
-                  {exp.website}
-                </Link>
-              )}
-              <Text>{exp.summary}</Text>
-            </View>
-          ))}
+          <View style={styles.expList}>
+            {experience.map((exp, idx) => (
+              <View key={idx} style={styles.expItem}>
+                <View style={styles.sectionHeader}>
+                  <Text>{exp.company}</Text>
+                  <Text>{exp.date}</Text>
+                </View>
+                <View style={styles.sectionDetail}>
+                  <Text>{exp.position}</Text>
+                  <Text>{exp.location}</Text>
+                </View>
+                {exp.website && (
+                  <Link src={exp.website} style={styles.link}>
+                    {exp.website}
+                  </Link>
+                )}
+                <Text>{exp.summary}</Text>
+              </View>
+            ))}
+          </View>
         </View>
       )}
 
