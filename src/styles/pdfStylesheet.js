@@ -51,7 +51,7 @@ const styles = StyleSheet.create({
     flexDirection: "column",
     gap: 16,
   },
-  expItem: {
+  listItem: {
     flexDirection: "column",
     gap: 4,
   },
