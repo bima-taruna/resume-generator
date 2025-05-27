@@ -84,7 +84,7 @@ const ResumePDF = ({
           <Text style={styles.subHeader}>Experience</Text>
           <View style={styles.expList}>
             {experience.map((exp, idx) => (
-              <View key={idx} style={styles.expItem}>
+              <View key={idx} style={styles.listItem}>
                 <View style={styles.sectionHeader}>
                   <Text>{exp.company}</Text>
                   <Text>{exp.date}</Text>
@@ -111,10 +111,15 @@ const ResumePDF = ({
           <Text style={styles.subHeader}>Education</Text>
           {education.map((edu, idx) => (
             <View key={idx} style={styles.listItem}>
-              <Text>
-                <b>{edu.institution}</b> | {edu.study} ({edu.type}) | {edu.date}
-              </Text>
-              <Text>Score: {edu.score}</Text>
+              <View style={styles.sectionHeader}>
+                <Text>{edu.institution}</Text>
+                <Text>{edu.date}</Text>
+              </View>
+              <View style={styles.sectionDetail}>
+                <Text>{edu.study}</Text>
+                <Text>{edu.type}</Text>
+              </View>
+              <Text>{edu.score}</Text>
             </View>
           ))}
         </View>
