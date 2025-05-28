@@ -172,10 +172,13 @@ function ResumePDF({
             <Text style={styles.subHeader}>Certifications</Text>
             {certifications.map((cert, idx) => (
               <View key={idx} style={styles.listItem}>
-                <Text>
-                  <b>{cert.name}</b> | {cert.date}
-                </Text>
-                <Text>{cert.issuer}</Text>
+                <View style={styles.sectionHeader}>
+                  <Text>{cert.name}</Text>
+                  <Text>{cert.date}</Text>
+                </View>
+                <View style={styles.sectionDetail}>
+                  <Text>{cert.issuer}</Text>
+                </View>
                 {cert.website && (
                   <Link src={cert.website} style={styles.link}>
                     {cert.website}
