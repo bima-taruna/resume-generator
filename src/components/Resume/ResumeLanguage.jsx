@@ -4,11 +4,7 @@ function ResumeLanguage({ languageData }) {
     <section id="languages">
       <h3>Languages</h3>
       <hr />
-      <ul className="language-list">
-        {languageData?.map((item, index) => (
-          <li key={index}>{item}</li>
-        ))}
-      </ul>
+      <ul className="language-list">{languageData.join(", ")}</ul>
     </section>
   );
 }
