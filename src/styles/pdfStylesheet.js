@@ -51,6 +51,13 @@ const styles = StyleSheet.create({
     flexDirection: "column",
     gap: 16,
   },
+  skillrow: {
+    flexDirection: "row",
+    marginBottom: 10,
+  },
+  skillItem: {
+    width: "25%", // 100% / 4 = 25%
+  },
   listItem: {
     flexDirection: "column",
     gap: 4,
