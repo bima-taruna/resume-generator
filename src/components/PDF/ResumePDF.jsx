@@ -131,9 +131,10 @@ const ResumePDF = ({
           <Text style={styles.subHeader}>Projects</Text>
           {projects.map((proj, idx) => (
             <View key={idx} style={styles.listItem}>
-              <Text>
-                <b>{proj.name}</b> | {proj.date}
-              </Text>
+              <View style={styles.sectionHeader}>
+                <Text>{proj.name}</Text>
+                <Text>{proj.date}</Text>
+              </View>
               <Text>{proj.description}</Text>
               {proj.website && (
                 <Link src={proj.website} style={styles.link}>
