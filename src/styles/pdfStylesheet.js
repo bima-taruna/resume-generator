@@ -19,7 +19,7 @@ const styles = StyleSheet.create({
     gap: 4,
   },
   section: {
-    marginBottom: 16, // matches section gap
+    marginBottom: 8, // matches section gap
   },
   header: {
     fontSize: 24, // matches .full-name font-size: 1.5rem (~24px)
@@ -28,7 +28,7 @@ const styles = StyleSheet.create({
     marginBottom: 8,
   },
   subHeader: {
-    fontSize: 16, // matches .headline/h2 font-size: 1rem (16px)
+    fontSize: 14, // matches .headline/h2 font-size: 1rem (16px)
     fontWeight: "bold",
     lineHeight: 1.5,
     marginBottom: 4,
@@ -38,7 +38,7 @@ const styles = StyleSheet.create({
     marginVertical: 8,
   },
   h3: {
-    fontSize: 16, // matches h3 font-size: 16px
+    fontSize: 12, // matches h3 font-size: 16px
     fontWeight: 700,
     lineHeight: 1.25,
     marginBottom: 4,
@@ -56,7 +56,7 @@ const styles = StyleSheet.create({
     marginBottom: 10,
   },
   skillItem: {
-    width: "25%", // 100% / 4 = 25%
+    width: "25%",
   },
   listItem: {
     flexDirection: "column",
@@ -74,11 +74,6 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     justifyContent: "space-between",
   },
-  // listItem: {
-  //   marginBottom: 4,
-  //   fontSize: 12,
-  //   fontWeight: 500, // matches .skill-list > li, .language-list > li, etc.
-  // },
   link: {
     color: "#0077cc",
     textDecoration: "underline",
