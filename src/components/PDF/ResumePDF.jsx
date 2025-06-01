@@ -26,7 +26,7 @@ function ResumePDF({
   const rows = chunkArray(skills, 4);
   return (
     <Document>
-      <Page size="A4" style={styles.page}>
+      <Page size={[596.16, 1020.24]} style={styles.page}>
         {/* Header */}
         <View style={styles.section}>
           <Text style={styles.header}>{basic.fullName}</Text>
