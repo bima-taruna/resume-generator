@@ -1,8 +1,8 @@
 import { RxHamburgerMenu } from "react-icons/rx";
 import "../styles/floatingButton.css";
-function FloatingButton() {
+function FloatingButton({ handleClick }) {
   return (
-    <button className="floating-button">
+    <button onClick={handleClick} className="floating-button">
       <RxHamburgerMenu />
     </button>
   );
