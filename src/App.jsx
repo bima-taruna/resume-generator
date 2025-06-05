@@ -4,6 +4,7 @@ import CustomModal from "./components/CustomModal";
 import useResumeData from "./hooks/useResumeData";
 import Navbar from "./components/Navbar";
 import FloatingButton from "./components/FloatingButton";
+import { useEffect } from "react";
 function App() {
   const {
     resumeData,
@@ -17,7 +18,22 @@ function App() {
     handleSubmit,
     handleUpdateSubmit,
     handleDelete,
+    activeInput,
+    setActiveInput,
   } = useResumeData();
+
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth >= 1024 && activeInput) {
+        setActiveInput(false);
+      }
+      if (window.innerWidth < 1024 && !activeInput) {
+        setActiveInput(true);
+      }
+    };
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, [activeInput, setActiveInput]);
 
   return (
     <>
@@ -36,6 +52,7 @@ function App() {
         openModal={setActiveModal}
         openUpdateModal={setActiveUpdateModal}
         setIndexItem={setIndexItem}
+        isHidden={activeInput}
       />
       {/* <section className="resume-canvas">
         <PDFViewer>
@@ -74,7 +91,7 @@ function App() {
         itemIndex={indexItem}
         handleDelete={handleDelete}
       />
-      <FloatingButton />
+      <FloatingButton handleClick={() => setActiveInput(!activeInput)} />
     </>
   );
 }
