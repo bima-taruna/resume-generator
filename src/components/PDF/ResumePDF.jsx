@@ -6,6 +6,8 @@ import PhoneIcon from "./Icons/PhoneIcon";
 import EmailIcon from "./Icons/EmailIcon";
 import LinkIcon from "./Icons/LinkIcon";
 import chunkArray from "../../helper/chunkArray";
+import GithubIcon from "./Icons/GithubIcon";
+import LinkedInIcon from "./Icons/LinkedinIcon";
 
 Font.register({
   family: "Source Serif Pro",
@@ -62,12 +64,18 @@ function ResumePDF({
             <Text style={styles.subHeader}>Profiles</Text>
             <View style={styles.profileList}>
               {profiles.map((profile, idx) => (
-                <Text key={idx} style={styles.listItem}>
-                  {profile.network}:{" "}
-                  <Link src={profile.website} style={styles.link}>
-                    {profile.username}
-                  </Link>
-                </Text>
+                <View key={idx} style={styles.listItem}>
+                  <View style={styles.profilesItem}>
+                    {profile.network === "linkedin" ? (
+                      <LinkedInIcon />
+                    ) : (
+                      <GithubIcon />
+                    )}
+                    <Link src={profile.website} style={styles.link}>
+                      {profile.username}
+                    </Link>
+                  </View>
+                </View>
               ))}
             </View>
           </View>
