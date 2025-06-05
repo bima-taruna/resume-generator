@@ -139,3 +139,9 @@ table {
 
   font-family: "Source Serif 4", serif;
 }
+
+@media (max-width: 1024px) {
+  #root {
+    justify-content: center;
+  }
+}
