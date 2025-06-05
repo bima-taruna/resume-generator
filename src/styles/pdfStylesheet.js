@@ -28,8 +28,8 @@ const styles = StyleSheet.create({
     marginBottom: 8,
   },
   subHeader: {
-    fontSize: 14, // matches .headline/h2 font-size: 1rem (16px)
-    fontWeight: "bold",
+    fontSize: 12,
+    fontWeight: "heavy",
     lineHeight: 1.5,
     marginBottom: 4,
     borderBottomWidth: 1,
@@ -55,6 +55,10 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     marginBottom: 10,
   },
+  profilesItem: {
+    flexDirection: "row",
+    gap: 12,
+  },
   skillItem: {
     width: "25%",
   },
@@ -66,11 +70,11 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     justifyContent: "space-between",
     fontWeight: "bold",
-    fontSize: 14,
+    fontSize: 10,
   },
   sectionDetail: {
     fontWeight: "bold",
-    fontSize: 12,
+    fontSize: 10,
     flexDirection: "row",
     justifyContent: "space-between",
   },
