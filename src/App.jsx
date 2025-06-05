@@ -3,6 +3,7 @@ import DataInputs from "./components/DataInputs/DataInputs";
 import CustomModal from "./components/CustomModal";
 import useResumeData from "./hooks/useResumeData";
 import Navbar from "./components/Navbar";
+import FloatingButton from "./components/FloatingButton";
 function App() {
   const {
     resumeData,
@@ -36,6 +37,11 @@ function App() {
         openUpdateModal={setActiveUpdateModal}
         setIndexItem={setIndexItem}
       />
+      {/* <section className="resume-canvas">
+        <PDFViewer>
+          <ResumePDF {...resumeData} />
+        </PDFViewer>
+      </section> */}
       <Resume
         basicData={resumeData.basic}
         summary={resumeData.summary}
@@ -68,6 +74,7 @@ function App() {
         itemIndex={indexItem}
         handleDelete={handleDelete}
       />
+      <FloatingButton />
     </>
   );
 }
