@@ -15,6 +15,9 @@ const useResumeData = () => {
   });
   const [activeModal, setActiveModal] = useState(null);
   const [activeUpdateModal, setActiveUpdateModal] = useState(null);
+  const [activeInput, setActiveInput] = useState(
+    () => window.innerWidth < 1024
+  );
   const [indexItem, setIndexItem] = useState(null);
 
   const handleChange = (e) => {
@@ -83,6 +86,8 @@ const useResumeData = () => {
     setActiveModal,
     activeUpdateModal,
     setActiveUpdateModal,
+    setActiveInput,
+    activeInput,
     indexItem,
     setIndexItem,
     handleChange,
