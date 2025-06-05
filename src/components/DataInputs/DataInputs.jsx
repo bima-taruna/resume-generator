@@ -26,9 +26,10 @@ function DataInputs({
   openModal,
   openUpdateModal,
   setIndexItem,
+  isHidden,
 }) {
   return (
-    <section className="data-inputs">
+    <section className={`data-inputs ${isHidden ? "hidden" : ""}`}>
       <BasicForm basicData={basicData} onChange={onChange} />
       <Summary summaryData={summaryData} onChange={onChange} />
       <Profiles
