@@ -1,0 +1,21 @@
+.floating-button {
+  display: none;
+}
+
+@media (max-width: 1024px) {
+  .floating-button {
+    display: block;
+    position: fixed;
+    bottom: 1.25rem;
+    left: 45%;
+    z-index: 199;
+    padding: 1rem;
+    background-color: black;
+    border-radius: 0.5rem;
+    color: white;
+    font-size: 2rem;
+    font-weight: bold;
+    border: none;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+  }
+}
