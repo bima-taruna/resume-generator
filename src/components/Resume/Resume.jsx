@@ -19,10 +19,11 @@ function Resume({
   skillData,
   certificationData,
   languageData,
+  profilePic,
 }) {
   return (
     <section className="resume-canvas">
-      <ResumeHeader basicData={basicData} />
+      <ResumeHeader basicData={basicData} profilePic={profilePic} />
       <ResumeProfiles profilesData={profilesData} />
       <ResumeSummary summary={summary} />
       <ResumeExperience experienceData={experienceData} />
