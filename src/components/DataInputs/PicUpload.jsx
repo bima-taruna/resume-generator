@@ -1,15 +1,11 @@
+import "../../styles/profile-pic.css";
 function PicUpload({ profilePic, handlePicUpload }) {
   return (
-    <div>
-      <label>Profile Picture:</label>
+    <div className="profile-pic">
       <input type="file" accept="image/*" onChange={handlePicUpload} />
       {profilePic && (
-        <div style={{ marginTop: 10 }}>
-          <img
-            src={profilePic}
-            alt="Profile"
-            style={{ width: 150, borderRadius: "50%" }}
-          />
+        <div className="pic">
+          <img src={profilePic} alt="Profile" />
         </div>
       )}
     </div>
