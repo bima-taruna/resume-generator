@@ -20,6 +20,8 @@ function App() {
     handleDelete,
     activeInput,
     setActiveInput,
+    handlePicUpload,
+    profilePic,
   } = useResumeData();
 
   useEffect(() => {
@@ -53,6 +55,8 @@ function App() {
         openUpdateModal={setActiveUpdateModal}
         setIndexItem={setIndexItem}
         isHidden={activeInput}
+        profilePic={profilePic}
+        handlePicUpload={handlePicUpload}
       />
       {/* <section className="resume-canvas">
         <PDFViewer>
@@ -69,6 +73,7 @@ function App() {
         skillData={resumeData.skills}
         certificationData={resumeData.certifications}
         languageData={resumeData.languages}
+        profilePic={profilePic}
       />
       <CustomModal
         type={activeModal}
