@@ -13,6 +13,7 @@ const useResumeData = () => {
     certifications: data.certifications,
     languages: data.languages,
   });
+  const [profilePic, setProfilePic] = useState(null);
   const [activeModal, setActiveModal] = useState(null);
   const [activeUpdateModal, setActiveUpdateModal] = useState(null);
   const [activeInput, setActiveInput] = useState(
@@ -58,6 +59,19 @@ const useResumeData = () => {
     setActiveModal(null);
   };
 
+  const handlePicUpload = (e) => {
+    const file = e.target.files[0];
+    if (!file) return;
+
+    const reader = new FileReader();
+    reader.onload = () => {
+      const base64 = reader.result;
+      // localStorage.setItem("profilePic", base64);
+      setProfilePic(base64);
+    };
+    reader.readAsDataURL(file);
+  };
+
   const handleUpdateSubmit = (e) => {
     e.preventDefault();
     const formData = new FormData(e.target);
@@ -94,6 +108,8 @@ const useResumeData = () => {
     handleSubmit,
     handleUpdateSubmit,
     handleDelete,
+    profilePic,
+    handlePicUpload,
   };
 };
 
