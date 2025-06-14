@@ -12,6 +12,7 @@ import modalTypes from "../../helper/modalTypes";
 import ItemCard from "../ItemCard";
 import { PiCertificateLight, PiGraduationCap } from "react-icons/pi";
 import { GiSkills } from "react-icons/gi";
+import PicUpload from "./PicUpload";
 function DataInputs({
   basicData,
   summaryData,
@@ -27,9 +28,12 @@ function DataInputs({
   openUpdateModal,
   setIndexItem,
   isHidden,
+  profilePic,
+  handlePicUpload,
 }) {
   return (
     <section className={`data-inputs ${isHidden ? "hidden" : ""}`}>
+      <PicUpload profilePic={profilePic} handlePicUpload={handlePicUpload} />
       <BasicForm basicData={basicData} onChange={onChange} />
       <Summary summaryData={summaryData} onChange={onChange} />
       <Profiles
