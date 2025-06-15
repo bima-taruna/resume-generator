@@ -33,8 +33,12 @@ function DataInputs({
 }) {
   return (
     <section className={`data-inputs ${isHidden ? "hidden" : ""}`}>
-      <PicUpload profilePic={profilePic} handlePicUpload={handlePicUpload} />
-      <BasicForm basicData={basicData} onChange={onChange} />
+      <BasicForm
+        basicData={basicData}
+        onChange={onChange}
+        profilePic={profilePic}
+        handlePicUpload={handlePicUpload}
+      />
       <Summary summaryData={summaryData} onChange={onChange} />
       <Profiles
         profilesData={profilesData}
