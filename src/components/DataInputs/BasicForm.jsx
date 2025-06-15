@@ -1,8 +1,9 @@
 import TextInput from "../TextInput";
 import "../../styles/basicForm.css";
 import { FaRegUser } from "react-icons/fa";
+import PicUpload from "./PicUpload";
 
-function BasicForm({ basicData, onChange }) {
+function BasicForm({ basicData, onChange, profilePic, handlePicUpload }) {
   return (
     <>
       <section id="basics">
@@ -10,6 +11,7 @@ function BasicForm({ basicData, onChange }) {
           <FaRegUser />
           <h2>Basics</h2>
         </header>
+        <PicUpload profilePic={profilePic} handlePicUpload={handlePicUpload} />
         <TextInput
           label={"Full Name"}
           name={"fullName"}
