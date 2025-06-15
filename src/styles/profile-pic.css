@@ -1,18 +1,26 @@
 .profile-pic {
   display: flex;
-  flex-direction: row-reverse;
+  flex-direction: row;
   justify-content: flex-start;
   align-items: center;
+  width: 100%;
   gap: 2rem;
+  align-self: flex-start;
+}
+
+.upload-container {
+  display: flex;
+  justify-content: center;
 }
 
 .pic {
-  width: 80px;
-  height: 70px;
+  max-width: 80px;
+  max-height: 70px;
 }
 
 .pic > img {
   width: 100%;
-  height: 100%;
+  height: 70px;
   border-radius: 50%;
+  border: 1px solid white;
 }
