@@ -1,5 +1,10 @@
 .profile-pic {
   display: flex;
+  flex-direction: column;
+}
+
+.pic-input {
+  display: flex;
   flex-direction: row;
   justify-content: flex-start;
   align-items: center;
