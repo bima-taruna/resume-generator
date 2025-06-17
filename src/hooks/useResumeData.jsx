@@ -72,6 +72,10 @@ const useResumeData = () => {
     reader.readAsDataURL(file);
   };
 
+  const deletePic = () => {
+    setProfilePic(null);
+  };
+
   const handleUpdateSubmit = (e) => {
     e.preventDefault();
     const formData = new FormData(e.target);
@@ -110,6 +114,7 @@ const useResumeData = () => {
     handleDelete,
     profilePic,
     handlePicUpload,
+    deletePic,
   };
 };
 
