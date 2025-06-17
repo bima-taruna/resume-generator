@@ -9,7 +9,7 @@
   justify-content: flex-start;
   align-items: center;
   width: 100%;
-  gap: 2rem;
+  gap: 1rem;
   align-self: flex-start;
 }
 
@@ -24,8 +24,19 @@
 }
 
 .pic > img {
-  width: 100%;
+  width: 70px;
   height: 70px;
   border-radius: 50%;
   border: 1px solid white;
+}
+
+.delete-pic {
+  border: none;
+  color: white;
+  background-color: red;
+  border-radius: 0.2rem;
+  padding: 0.2 0.5rem;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
 }
