@@ -4,15 +4,15 @@ import { MdAlternateEmail } from "react-icons/md";
 function ResumeHeader({ basicData, profilePic }) {
   return (
     <header id="resume-header">
-      <div className="user-pic">
-        {profilePic && (
+      {profilePic && (
+        <div className="user-pic">
           <img
             src={profilePic}
             alt="profile picture"
             style={{ width: "100%", height: "100%" }}
           />
-        )}
-      </div>
+        </div>
+      )}
       <div className="basic-data">
         <h1 className="full-name">{basicData.fullName}</h1>
         <h2 className="headline">{basicData.headline}</h2>
