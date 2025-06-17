@@ -3,7 +3,13 @@ import "../../styles/basicForm.css";
 import { FaRegUser } from "react-icons/fa";
 import PicUpload from "./PicUpload";
 
-function BasicForm({ basicData, onChange, profilePic, handlePicUpload }) {
+function BasicForm({
+  basicData,
+  onChange,
+  profilePic,
+  handlePicUpload,
+  deletePic,
+}) {
   return (
     <>
       <section id="basics">
@@ -11,7 +17,11 @@ function BasicForm({ basicData, onChange, profilePic, handlePicUpload }) {
           <FaRegUser />
           <h2>Basics</h2>
         </header>
-        <PicUpload profilePic={profilePic} handlePicUpload={handlePicUpload} />
+        <PicUpload
+          profilePic={profilePic}
+          handlePicUpload={handlePicUpload}
+          deletePicture={deletePic}
+        />
         <TextInput
           label={"Full Name"}
           name={"fullName"}
