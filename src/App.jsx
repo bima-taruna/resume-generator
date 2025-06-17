@@ -22,6 +22,7 @@ function App() {
     setActiveInput,
     handlePicUpload,
     profilePic,
+    deletePic,
   } = useResumeData();
 
   useEffect(() => {
@@ -57,6 +58,7 @@ function App() {
         isHidden={activeInput}
         profilePic={profilePic}
         handlePicUpload={handlePicUpload}
+        deletePic={deletePic}
       />
       {/* <section className="resume-canvas">
         <PDFViewer>
