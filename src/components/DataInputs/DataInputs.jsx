@@ -30,6 +30,7 @@ function DataInputs({
   isHidden,
   profilePic,
   handlePicUpload,
+  deletePic,
 }) {
   return (
     <section className={`data-inputs ${isHidden ? "hidden" : ""}`}>
@@ -38,6 +39,7 @@ function DataInputs({
         onChange={onChange}
         profilePic={profilePic}
         handlePicUpload={handlePicUpload}
+        deletePic={deletePic}
       />
       <Summary summaryData={summaryData} onChange={onChange} />
       <Profiles
