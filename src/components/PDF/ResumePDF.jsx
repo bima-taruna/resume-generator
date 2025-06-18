@@ -104,11 +104,16 @@ function ResumePDF({
                     <Text>{exp.position}</Text>
                     <Text>{exp.location}</Text>
                   </View>
-                  {exp.website && (
-                    <Link src={exp.website} style={styles.link}>
-                      {exp.website}
-                    </Link>
-                  )}
+                  <View style={styles.textWithIcon}>
+                    {exp.website && (
+                      <>
+                        <LinkIcon />
+                        <Link src={exp.website} style={styles.link}>
+                          {exp.website}
+                        </Link>
+                      </>
+                    )}
+                  </View>
                   <Text>{exp.summary}</Text>
                 </View>
               ))}
@@ -147,11 +152,16 @@ function ResumePDF({
                   <Text>{proj.date}</Text>
                 </View>
                 <Text>{proj.description}</Text>
-                {proj.website && (
-                  <Link src={proj.website} style={styles.link}>
-                    {proj.website}
-                  </Link>
-                )}
+                <View style={styles.textWithIcon}>
+                  {proj.website && (
+                    <>
+                      <LinkIcon />
+                      <Link src={proj.website} style={styles.link}>
+                        {proj.website}
+                      </Link>
+                    </>
+                  )}
+                </View>
                 <Text>{proj.summary}</Text>
               </View>
             ))}
@@ -187,11 +197,16 @@ function ResumePDF({
                 <View style={styles.sectionDetail}>
                   <Text>{cert.issuer}</Text>
                 </View>
-                {cert.website && (
-                  <Link src={cert.website} style={styles.link}>
-                    {cert.website}
-                  </Link>
-                )}
+                <View style={styles.textWithIcon}>
+                  {cert.website && (
+                    <>
+                      <LinkIcon />
+                      <Link src={cert.website} style={styles.link}>
+                        {cert.website}
+                      </Link>
+                    </>
+                  )}
+                </View>
                 <Text>{cert.summary}</Text>
               </View>
             ))}
