@@ -1,4 +1,12 @@
-import { Page, Text, View, Document, Link, Font } from "@react-pdf/renderer";
+import {
+  Page,
+  Text,
+  View,
+  Document,
+  Link,
+  Font,
+  Image,
+} from "@react-pdf/renderer";
 
 import styles from "../../styles/pdfStylesheet";
 import Location from "./Icons/Location";
@@ -15,6 +23,7 @@ Font.register({
 });
 // Main PDF Document
 function ResumePDF({
+  profilePic,
   basic,
   summary,
   experience,
@@ -30,32 +39,35 @@ function ResumePDF({
     <Document>
       <Page size={[596.16, 1020.24]} style={styles.page}>
         {/* Header */}
-        <View style={styles.section}>
-          <Text style={styles.header}>{basic.fullName}</Text>
-          <Text>{basic.headline}</Text>
-          <View style={styles.headerAdditional}>
-            <View style={styles.textWithIcon}>
-              <Location />
-              <Text>{basic.location} | </Text>
-            </View>
-            <View style={styles.textWithIcon}>
-              <PhoneIcon />
-              <Text>{basic.phoneNumber} | </Text>
-            </View>
-            <View style={styles.textWithIcon}>
-              <EmailIcon />
-              <Text>{basic.email}</Text>
-            </View>
-            <View style={styles.textWithIcon}>
-              {basic.website && (
-                <>
-                  <Text> |</Text>
-                  <LinkIcon />
-                  <Link src={basic.website} style={styles.link}>
-                    Website
-                  </Link>
-                </>
-              )}
+        <View style={styles.headerSection}>
+          {profilePic && <Image src={profilePic} style={styles.profilePic} />}
+          <View style={styles.section}>
+            <Text style={styles.header}>{basic.fullName}</Text>
+            <Text>{basic.headline}</Text>
+            <View style={styles.headerAdditional}>
+              <View style={styles.textWithIcon}>
+                <Location />
+                <Text>{basic.location} | </Text>
+              </View>
+              <View style={styles.textWithIcon}>
+                <PhoneIcon />
+                <Text>{basic.phoneNumber} | </Text>
+              </View>
+              <View style={styles.textWithIcon}>
+                <EmailIcon />
+                <Text>{basic.email}</Text>
+              </View>
+              <View style={styles.textWithIcon}>
+                {basic.website && (
+                  <>
+                    <Text>|</Text>
+                    <LinkIcon />
+                    <Link src={basic.website} style={styles.link}>
+                      Website
+                    </Link>
+                  </>
+                )}
+              </View>
             </View>
           </View>
         </View>
