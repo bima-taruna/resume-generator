@@ -13,6 +13,16 @@ const styles = StyleSheet.create({
     alignItems: "center",
     gap: 4,
   },
+  headerSection: {
+    flexDirection: "row",
+    gap: 10,
+  },
+  profilePic: {
+    width: 70,
+    height: 70,
+    borderWidth: 10,
+    borderColor: "black",
+  },
   textWithIcon: {
     flexDirection: "row",
     alignItems: "center",
