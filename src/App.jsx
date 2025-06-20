@@ -5,8 +5,6 @@ import useResumeData from "./hooks/useResumeData";
 import Navbar from "./components/Navbar";
 import FloatingButton from "./components/FloatingButton";
 import { useEffect } from "react";
-import ResumePDF from "./components/PDF/ResumePDF";
-import { PDFViewer } from "@react-pdf/renderer";
 function App() {
   const {
     resumeData,
@@ -67,11 +65,6 @@ function App() {
         handlePicUpload={handlePicUpload}
         deletePic={deletePic}
       />
-      {/* <section className="resume-canvas">
-        <PDFViewer>
-          <ResumePDF {...resumeData} profilePic={profilePic} />
-        </PDFViewer>
-      </section> */}
       <Resume
         basicData={resumeData.basic}
         summary={resumeData.summary}
