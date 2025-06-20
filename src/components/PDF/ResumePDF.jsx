@@ -18,8 +18,13 @@ import GithubIcon from "./Icons/GithubIcon";
 import LinkedInIcon from "./Icons/LinkedinIcon";
 
 Font.register({
-  family: "Source Serif Pro",
-  src: "http://fonts.gstatic.com/s/sourceserifpro/v4/CeUM4np2c42DV49nanp55aqQQDHDiKO-LH8MFmRo0b0.ttf",
+  family: "Source Serif 4",
+  src: "/font/SourceSerif4.ttf",
+});
+
+Font.register({
+  family: "Source Serif 4 Bold",
+  src: "/font/SourceSerif4Bold.ttf",
 });
 // Main PDF Document
 function ResumePDF({
@@ -40,7 +45,11 @@ function ResumePDF({
       <Page size={[596.16, 1020.24]} style={styles.page}>
         {/* Header */}
         <View style={styles.headerSection}>
-          {profilePic && <Image src={profilePic} style={styles.profilePic} />}
+          {typeof profilePic === "string" &&
+            profilePic.startsWith("data:image") &&
+            profilePic.length > 20 && (
+              <Image src={profilePic} style={styles.profilePic} />
+            )}
           <View style={styles.section}>
             <Text style={styles.header}>{basic.fullName}</Text>
             <Text>{basic.headline}</Text>
