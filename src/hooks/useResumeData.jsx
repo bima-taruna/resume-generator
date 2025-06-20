@@ -16,6 +16,7 @@ const useResumeData = () => {
   const [profilePic, setProfilePic] = useState(null);
   const [activeModal, setActiveModal] = useState(null);
   const [activeUpdateModal, setActiveUpdateModal] = useState(null);
+  const [showPDF, setShowPDF] = useState(true);
   const [activeInput, setActiveInput] = useState(
     () => window.innerWidth < 1024
   );
@@ -73,7 +74,9 @@ const useResumeData = () => {
   };
 
   const deletePic = () => {
+    setShowPDF(false);
     setProfilePic(null);
+    setTimeout(() => setShowPDF(true), 1);
   };
 
   const handleUpdateSubmit = (e) => {
@@ -115,6 +118,7 @@ const useResumeData = () => {
     profilePic,
     handlePicUpload,
     deletePic,
+    showPDF,
   };
 };
 
