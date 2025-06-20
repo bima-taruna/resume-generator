@@ -3,7 +3,7 @@ const styles = StyleSheet.create({
   page: {
     padding: "40px 48px", // matches .resume-canvas padding
     fontSize: 12,
-    fontFamily: "Source Serif Pro",
+    fontFamily: "Source Serif 4",
     color: "black", // matches .resume-canvas color
     backgroundColor: "white",
   },
@@ -39,7 +39,7 @@ const styles = StyleSheet.create({
   },
   subHeader: {
     fontSize: 12,
-    fontWeight: "heavy",
+    fontFamily: "Source Serif 4 Bold",
     lineHeight: 1.5,
     marginBottom: 4,
     borderBottomWidth: 1,
@@ -79,8 +79,8 @@ const styles = StyleSheet.create({
   sectionHeader: {
     flexDirection: "row",
     justifyContent: "space-between",
-    fontWeight: "bold",
-    fontSize: 10,
+    fontFamily: "Source Serif 4 Bold",
+    fontSize: 11,
   },
   sectionDetail: {
     fontWeight: "bold",
