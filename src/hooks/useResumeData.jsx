@@ -1,17 +1,22 @@
 import { useState } from "react";
 import data from "../data/dummy-data";
+import { useEffect } from "react";
 
 const useResumeData = () => {
-  const [resumeData, setResumeData] = useState({
-    basic: data.basic,
-    summary: data.summary,
-    experience: data.experience,
-    profiles: data.profiles,
-    education: data.education,
-    projects: data.projects,
-    skills: data.skills,
-    certifications: data.certifications,
-    languages: data.languages,
+  const [resumeData, setResumeData] = useState(() => {
+    const saved = localStorage.getItem("resumeData");
+    if (saved) return JSON.parse(saved);
+    return {
+      basic: data.basic,
+      summary: data.summary,
+      experience: data.experience,
+      profiles: data.profiles,
+      education: data.education,
+      projects: data.projects,
+      skills: data.skills,
+      certifications: data.certifications,
+      languages: data.languages,
+    };
   });
   const [profilePic, setProfilePic] = useState(null);
   const [activeModal, setActiveModal] = useState(null);
@@ -22,6 +27,18 @@ const useResumeData = () => {
   );
   const [indexItem, setIndexItem] = useState(null);
 
+  useEffect(() => {
+    const savedPic = localStorage.getItem("profilePic");
+    const savedResumeData = localStorage.getItem("resumeData");
+    if (savedPic) setProfilePic(savedPic);
+    if (savedResumeData) setResumeData(JSON.parse(savedResumeData));
+  }, []);
+
+  useEffect(() => {
+    if (resumeData) {
+      localStorage.setItem("resumeData", JSON.stringify(resumeData));
+    }
+  }, [resumeData]);
   const handleChange = (e) => {
     const { name, value, id } = e.target;
 
@@ -57,6 +74,7 @@ const useResumeData = () => {
         id === "skills-form" || id === "languages-form" ? data.name : data,
       ],
     }));
+
     setActiveModal(null);
   };
 
@@ -67,7 +85,7 @@ const useResumeData = () => {
     const reader = new FileReader();
     reader.onload = () => {
       const base64 = reader.result;
-      // localStorage.setItem("profilePic", base64);
+      localStorage.setItem("profilePic", base64);
       setProfilePic(base64);
     };
     reader.readAsDataURL(file);
@@ -76,6 +94,7 @@ const useResumeData = () => {
   const deletePic = () => {
     setShowPDF(false);
     setProfilePic(null);
+    localStorage.removeItem("profilePic");
     setTimeout(() => setShowPDF(true), 1);
   };
 
