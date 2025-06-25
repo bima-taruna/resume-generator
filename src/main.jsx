@@ -3,7 +3,7 @@ import { createRoot } from "react-dom/client";
 import "./styles/index.css";
 import App from "./App.jsx";
 import { Buffer } from "buffer";
-window.Buffer = Buffer;
+globalThis.Buffer = Buffer;
 createRoot(document.getElementById("root")).render(
   <StrictMode>
     <App />
