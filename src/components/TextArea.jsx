@@ -1,6 +1,7 @@
 import "../styles/textArea.css";
 function TextArea({
   label,
+  id,
   name,
   value,
   defaultValue,
@@ -9,10 +10,10 @@ function TextArea({
 }) {
   return (
     <div className="text-area-container">
-      {label && <label htmlFor={name}>{label}</label>}
+      {label && <label htmlFor={id}>{label}</label>}
       <textarea
         name={name}
-        id={name}
+        id={id}
         value={value}
         onChange={onChange}
         defaultValue={defaultValue}
