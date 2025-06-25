@@ -9,12 +9,14 @@ function ProjectForm({ handleSubmit, data = {}, handleDelete, itemIndex }) {
         <TextInput
           label={"Name"}
           name={"name"}
+          id={"project-name"}
           defaultValue={data.name || ""}
           required={true}
         />
         <TextInput
           label={"Description"}
           name={"description"}
+          id={"project-description"}
           defaultValue={data.description || ""}
         />
       </div>
@@ -22,18 +24,21 @@ function ProjectForm({ handleSubmit, data = {}, handleDelete, itemIndex }) {
         <TextInput
           label={"Date or Date Range"}
           name={"date"}
+          id={"project-date"}
           defaultValue={data.date || ""}
           required={true}
           placeholder={"March 2023 - Present"}
         />
         <TextInput
           label={"Website"}
+          id={"project-website"}
           name={"website"}
           defaultValue={data.website || ""}
         />
       </div>
       <TextArea
         label={"Summary"}
+        id={"project-summary"}
         name={"summary"}
         defaultValue={data.summary || ""}
       />

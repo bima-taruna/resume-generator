@@ -7,6 +7,7 @@ function SkillForm({ handleSubmit, data, handleDelete, itemIndex }) {
       <TextInput
         label={"Name"}
         name={"name"}
+        id={"skill-name"}
         defaultValue={data || ""}
         required={true}
       />

@@ -8,12 +8,14 @@ function EducationForm({ handleSubmit, data = {}, handleDelete, itemIndex }) {
         <TextInput
           label={"Institution"}
           name={"institution"}
+          id={"education-institution"}
           defaultValue={data.institution || ""}
           required={true}
         />
         <TextInput
           label={"Type of Study"}
           name={"type"}
+          id={"education-type"}
           defaultValue={data.type || ""}
           placeholder={"Bachelor Degree"}
           required={true}
@@ -23,6 +25,7 @@ function EducationForm({ handleSubmit, data = {}, handleDelete, itemIndex }) {
         <TextInput
           label={"Area of Study"}
           name={"study"}
+          id={"education-study"}
           defaultValue={data.study || ""}
           placeholder={"Computer Science"}
           required={true}
@@ -30,6 +33,7 @@ function EducationForm({ handleSubmit, data = {}, handleDelete, itemIndex }) {
         <TextInput
           label={"Score"}
           name={"score"}
+          id={"education-score"}
           defaultValue={data.score || ""}
           placeholder={"3.80 GPA"}
           required={true}
@@ -38,6 +42,7 @@ function EducationForm({ handleSubmit, data = {}, handleDelete, itemIndex }) {
       <TextInput
         label={"Date or Date Range"}
         name={"date"}
+        id={"education-date"}
         defaultValue={data.date || ""}
         required={true}
       />

@@ -9,12 +9,14 @@ function ExperienceForm({ handleSubmit, data = {}, handleDelete, itemIndex }) {
         <TextInput
           label={"Company"}
           name={"company"}
+          id={"exp-company"}
           defaultValue={data.company || ""}
           required={true}
         />
         <TextInput
           label={"Position"}
           name={"position"}
+          id={"exp-position"}
           defaultValue={data.position || ""}
           required={true}
         />
@@ -23,6 +25,7 @@ function ExperienceForm({ handleSubmit, data = {}, handleDelete, itemIndex }) {
         <TextInput
           label={"Date or Date Range"}
           name={"date"}
+          id={"exp-date"}
           placeholder={"March 2023 - Present"}
           defaultValue={data.date || ""}
           required={true}
@@ -30,6 +33,7 @@ function ExperienceForm({ handleSubmit, data = {}, handleDelete, itemIndex }) {
         <TextInput
           label={"Location"}
           name={"location"}
+          id={"exp-location"}
           defaultValue={data.location || ""}
           required={true}
         />
@@ -37,11 +41,13 @@ function ExperienceForm({ handleSubmit, data = {}, handleDelete, itemIndex }) {
       <TextInput
         label={"Website"}
         name={"website"}
+        id={"exp-website"}
         defaultValue={data.website || ""}
       />
       <TextArea
         label={"Summary"}
         name={"summary"}
+        id={"exp-summary"}
         defaultValue={data.summary || ""}
       />
       <div className="exp-form-buttons">

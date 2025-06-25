@@ -16,6 +16,7 @@ function ProfileForm({ handleSubmit, data = {}, handleDelete, itemIndex }) {
         <TextInput
           label={"Username"}
           name={"username"}
+          id={"profile-username"}
           defaultValue={data.username || ""}
           required={true}
         />
@@ -23,6 +24,7 @@ function ProfileForm({ handleSubmit, data = {}, handleDelete, itemIndex }) {
       <TextInput
         label={"Website"}
         name={"website"}
+        id={"profile-website"}
         placeholder={"https://linkedin.com/john-doe"}
         defaultValue={data.website || ""}
         required={true}

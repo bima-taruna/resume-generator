@@ -14,12 +14,14 @@ function CertificationForm({
         <TextInput
           label={"Name"}
           name={"name"}
+          id={"cert-name"}
           defaultValue={data.name || ""}
           required={true}
         />
         <TextInput
           label={"Issuer"}
           name={"issuer"}
+          id={"cert-issuer"}
           defaultValue={data.issuer || ""}
           required={true}
         />
@@ -28,6 +30,7 @@ function CertificationForm({
         <TextInput
           label={"Date"}
           name={"date"}
+          id={"cert-date"}
           placeholder={"March 2023"}
           defaultValue={data.date || ""}
           required={true}
@@ -35,6 +38,7 @@ function CertificationForm({
         <TextInput
           label={"Website"}
           name={"website"}
+          id={"cert-website"}
           defaultValue={data.website || ""}
           required={false}
         />
@@ -42,6 +46,7 @@ function CertificationForm({
       <TextArea
         label={"Summary"}
         name={"summary"}
+        id={"cert-summary"}
         defaultValue={data.summary || ""}
         required={false}
       />

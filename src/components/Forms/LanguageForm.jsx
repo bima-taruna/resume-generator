@@ -8,6 +8,7 @@ function LanguageForm({ handleSubmit, data, handleDelete, itemIndex }) {
       <TextInput
         label={"Name"}
         name={"name"}
+        id={"language-name"}
         defaultValue={data || ""}
         required={true}
       />
