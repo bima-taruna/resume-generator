@@ -25,12 +25,14 @@ function BasicForm({
         <TextInput
           label={"Full Name"}
           name={"fullName"}
+          id={"basic-name"}
           value={basicData.fullName}
           onChange={onChange}
         />
         <TextInput
           label={"Headline"}
           name={"headline"}
+          id={"basic-headline"}
           value={basicData.headline}
           onChange={onChange}
         />
@@ -38,12 +40,14 @@ function BasicForm({
           <TextInput
             label={"Email"}
             name={"email"}
+            id={"basic-email"}
             value={basicData.email}
             onChange={onChange}
           />
           <TextInput
             label={"Phone"}
             name={"phoneNumber"}
+            id={"basic-phone"}
             value={basicData.phoneNumber}
             onChange={onChange}
           />
@@ -52,12 +56,14 @@ function BasicForm({
           <TextInput
             label={"Website"}
             name={"website"}
+            id={"basic-website"}
             value={basicData.website}
             onChange={onChange}
           />
           <TextInput
             label={"Location"}
             name={"location"}
+            id={"basic-location"}
             value={basicData.location}
             onChange={onChange}
           />
