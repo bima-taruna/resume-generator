@@ -2,8 +2,8 @@ const data = {
   basic: {
     fullName: "John Doe",
     headline: "Fullstack Web Developer",
-    location: "Medan, Indonesia",
-    phoneNumber: "085762068329",
+    location: "New York",
+    phoneNumber: "000-0000000",
     email: "johnDoe@email.com",
     website: "",
   },
@@ -12,13 +12,13 @@ const data = {
   profiles: [
     {
       network: "linkedin",
-      website: "https://www.linkedin.com/in/bimataruna/",
-      username: "bima-taruna",
+      website: "https://www.linkedin.com/in/john-doe/",
+      username: "john-doe",
     },
     {
       network: "github",
-      website: "https://github.com/bima-taruna",
-      username: "bima-taruna",
+      website: "https://github.com/john-doe",
+      username: "john-doe",
     },
   ],
   experience: [
@@ -26,7 +26,7 @@ const data = {
       company: "PT mencari cinta sejati",
       date: "August 2017 - January 2024",
       position: "Fullstack Dev",
-      location: "Medan",
+      location: "New York",
       website: "",
       summary:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident veritatis numquam iure ad magni tenetur explicabo, voluptates illum tempora possimus atque, illo eius neque, nesciunt mollitia qui quia nemoeos.",
@@ -35,7 +35,7 @@ const data = {
       company: "PT Tekno Sejahtera",
       date: "August 2017 - January 2024",
       position: "Fullstack Dev",
-      location: "Medan",
+      location: "New York",
       website: "",
       summary:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident veritatis numquam iure ad magni tenetur explicabo, voluptates illum tempora possimus atque, illo eius neque, nesciunt mollitia qui quia nemoeos.",
