@@ -60,3 +60,10 @@
     padding-top: 2.5rem;
   }
 }
+
+@media (min-width: 1024px) {
+  .data-inputs {
+    transform: none !important;
+    opacity: 1 !important;
+  }
+}
