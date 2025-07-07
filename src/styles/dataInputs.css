@@ -54,10 +54,6 @@
   background: #333;
 }
 
-.hidden {
-  display: none;
-}
-
 @media (max-width: 1024px) {
   .data-inputs {
     width: 90vw;
