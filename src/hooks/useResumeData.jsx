@@ -22,6 +22,7 @@ const useResumeData = () => {
   const [activeModal, setActiveModal] = useState(null);
   const [activeUpdateModal, setActiveUpdateModal] = useState(null);
   const [showPDF, setShowPDF] = useState(true);
+  const [isMobile, setIsMobile] = useState(window.innerWidth < 1024);
   const [activeInput, setActiveInput] = useState(
     () => window.innerWidth < 1024
   );
@@ -32,6 +33,11 @@ const useResumeData = () => {
     const savedResumeData = localStorage.getItem("resumeData");
     if (savedPic) setProfilePic(savedPic);
     if (savedResumeData) setResumeData(JSON.parse(savedResumeData));
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 1024);
+    };
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
   }, []);
 
   useEffect(() => {
@@ -138,6 +144,7 @@ const useResumeData = () => {
     handlePicUpload,
     deletePic,
     showPDF,
+    isMobile,
   };
 };
 
