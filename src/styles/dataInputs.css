@@ -3,13 +3,14 @@
   position: fixed;
   flex: 1;
   padding: 1.5rem;
+  padding-bottom: 6rem;
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
   top: 4rem;
   left: 0;
   width: 25rem;
-  height: 100vh;
+  height: calc(100vh - 4rem);
   overflow-y: auto;
   z-index: 99;
   scrollbar-width: thin;
@@ -60,5 +61,6 @@
 @media (max-width: 1024px) {
   .data-inputs {
     width: 90vw;
+    padding-top: 2.5rem;
   }
 }
