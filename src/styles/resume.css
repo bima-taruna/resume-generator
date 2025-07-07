@@ -33,6 +33,10 @@ hr {
 @media (max-width: 1024px) {
   .resume-canvas {
     margin: 1rem;
-    margin-top: 4rem;
+    margin-top: 7rem;
+    width: 100%;
+    max-width: 800px;
+    padding: 1rem;
+    box-sizing: border-box;
   }
 }
