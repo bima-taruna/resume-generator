@@ -23,9 +23,9 @@ function App() {
     handlePicUpload,
     profilePic,
     deletePic,
+    isMobile,
     showPDF,
   } = useResumeData();
-
   useEffect(() => {
     const handleResize = () => {
       if (window.innerWidth >= 1024 && activeInput) {
@@ -60,10 +60,11 @@ function App() {
         openModal={setActiveModal}
         openUpdateModal={setActiveUpdateModal}
         setIndexItem={setIndexItem}
-        isHidden={activeInput}
+        isHidden={!activeInput}
         profilePic={profilePic}
         handlePicUpload={handlePicUpload}
         deletePic={deletePic}
+        isMobile={isMobile}
       />
       <Resume
         basicData={resumeData.basic}
