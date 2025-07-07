@@ -40,3 +40,12 @@
   left: 2rem;
   font-weight: 500;
 }
+
+@media (max-width: 1024px) {
+  .modal-box {
+    width: 90vw; /* responsive width */
+    max-width: 400px; /* or whatever you prefer */
+    max-height: 80vh;
+    overflow-y: auto;
+  }
+}
