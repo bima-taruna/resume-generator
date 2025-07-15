@@ -1,6 +1,9 @@
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import "../../styles/resumeProfiles.css";
-function ResumeProfiles({ profilesData }) {
+import { useResumeStore } from "../../stores/useResumeStore";
+function ResumeProfiles() {
+  const { resumeData } = useResumeStore();
+  const profilesData = resumeData.profiles;
   if (!profilesData || profilesData.length < 1) {
     return null;
   }
