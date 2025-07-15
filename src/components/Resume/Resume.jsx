@@ -10,7 +10,6 @@ import ResumeSkills from "./ResumeSkills";
 import ResumeCertificiation from "./ResumeCertification";
 import ResumeLanguage from "./ResumeLanguage";
 function Resume({
-  basicData,
   summary,
   experienceData,
   profilesData,
@@ -19,11 +18,10 @@ function Resume({
   skillData,
   certificationData,
   languageData,
-  profilePic,
 }) {
   return (
     <section className="resume-canvas">
-      <ResumeHeader basicData={basicData} profilePic={profilePic} />
+      <ResumeHeader />
       <ResumeProfiles profilesData={profilesData} />
       <ResumeSummary summary={summary} />
       <ResumeExperience experienceData={experienceData} />
