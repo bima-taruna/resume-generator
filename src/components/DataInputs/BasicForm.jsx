@@ -2,14 +2,14 @@ import TextInput from "../TextInput";
 import "../../styles/basicForm.css";
 import { FaRegUser } from "react-icons/fa";
 import PicUpload from "./PicUpload";
+import useResumeData from "../../hooks/useResumeData";
+import { useResumeStore } from "../../stores/useResumeStore";
 
-function BasicForm({
-  basicData,
-  onChange,
-  profilePic,
-  handlePicUpload,
-  deletePic,
-}) {
+function BasicForm() {
+  const { resumeData } = useResumeStore();
+  const basicData = resumeData.basic;
+  const { handleChange, handlePicUpload, deletePic, profilePic } =
+    useResumeData();
   return (
     <>
       <section id="basics">
@@ -27,14 +27,14 @@ function BasicForm({
           name={"fullName"}
           id={"basic-name"}
           value={basicData.fullName}
-          onChange={onChange}
+          onChange={handleChange}
         />
         <TextInput
           label={"Headline"}
           name={"headline"}
           id={"basic-headline"}
           value={basicData.headline}
-          onChange={onChange}
+          onChange={handleChange}
         />
         <div>
           <TextInput
@@ -42,14 +42,14 @@ function BasicForm({
             name={"email"}
             id={"basic-email"}
             value={basicData.email}
-            onChange={onChange}
+            onChange={handleChange}
           />
           <TextInput
             label={"Phone"}
             name={"phoneNumber"}
             id={"basic-phone"}
             value={basicData.phoneNumber}
-            onChange={onChange}
+            onChange={handleChange}
           />
         </div>
         <div>
@@ -58,14 +58,14 @@ function BasicForm({
             name={"website"}
             id={"basic-website"}
             value={basicData.website}
-            onChange={onChange}
+            onChange={handleChange}
           />
           <TextInput
             label={"Location"}
             name={"location"}
             id={"basic-location"}
             value={basicData.location}
-            onChange={onChange}
+            onChange={handleChange}
           />
         </div>
       </section>
