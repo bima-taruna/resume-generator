@@ -12,6 +12,13 @@ export const useResumeStore = create((set) => ({
     localStorage.removeItem("profilePic");
     set({ profilePic: null });
   },
+  delayedDeleteProfilePic: (callback, delay = 50) => {
+    setTimeout(() => {
+      localStorage.removeItem("profilePic");
+      set({ profilePic: null });
+      if (callback) callback();
+    }, delay);
+  },
   setResumeData: (newData) => {
     localStorage.setItem("resumeData", JSON.stringify(newData));
     set({ resumeData: newData });
