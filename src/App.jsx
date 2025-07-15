@@ -67,7 +67,6 @@ function App() {
         isMobile={isMobile}
       />
       <Resume
-        basicData={resumeData.basic}
         summary={resumeData.summary}
         experienceData={resumeData.experience}
         profilesData={resumeData.profiles}
