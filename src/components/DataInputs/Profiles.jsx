@@ -3,8 +3,11 @@ import ItemCard from "../ItemCard";
 import Button from "../Button";
 import { IoMdAdd } from "react-icons/io";
 import modalTypes from "../../helper/modalTypes";
+import { useResumeStore } from "../../stores/useResumeStore";
 
-function Profiles({ profilesData, openModal, openUpdateModal, setIndexItem }) {
+function Profiles({ openModal, openUpdateModal, setIndexItem }) {
+  const { resumeData } = useResumeStore();
+  const profilesData = resumeData.profiles;
   return (
     <>
       <section id="profiles">
