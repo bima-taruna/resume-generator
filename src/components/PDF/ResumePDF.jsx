@@ -27,8 +27,8 @@ Font.register({
   src: "/font/SourceSerif4Bold.ttf",
 });
 // Main PDF Document
-function ResumePDF({ resumeData, profilePic }) {
-  const rows = chunkArray(resumeData.skills, 4);
+const ResumePDF = ({ resumeData, profilePic }) => {
+  const rows = chunkArray(resumeData?.skills, 4);
   return (
     <Document>
       <Page size={[596.16, 1020.24]} style={styles.page}>
@@ -40,27 +40,27 @@ function ResumePDF({ resumeData, profilePic }) {
               <Image src={profilePic} style={styles.profilePic} />
             )}
           <View style={styles.section}>
-            <Text style={styles.header}>{resumeData.basic.fullName}</Text>
-            <Text>{resumeData.basic.headline}</Text>
+            <Text style={styles.header}>{resumeData?.basic?.fullName}</Text>
+            <Text>{resumeData?.basic?.headline}</Text>
             <View style={styles.headerAdditional}>
               <View style={styles.textWithIcon}>
                 <Location />
-                <Text>{resumeData.basic.location} | </Text>
+                <Text>{resumeData?.basic?.location} | </Text>
               </View>
               <View style={styles.textWithIcon}>
                 <PhoneIcon />
-                <Text>{resumeData.basic.phoneNumber} | </Text>
+                <Text>{resumeData?.basic?.phoneNumber} | </Text>
               </View>
               <View style={styles.textWithIcon}>
                 <EmailIcon />
-                <Text>{resumeData.basic.email}</Text>
+                <Text>{resumeData?.basic?.email}</Text>
               </View>
               <View style={styles.textWithIcon}>
-                {resumeData.basic.website && (
+                {resumeData?.basic?.website && (
                   <>
                     <Text>|</Text>
                     <LinkIcon />
-                    <Link src={resumeData.basic.website} style={styles.link}>
+                    <Link src={resumeData?.basic?.website} style={styles.link}>
                       Website
                     </Link>
                   </>
@@ -69,21 +69,23 @@ function ResumePDF({ resumeData, profilePic }) {
             </View>
           </View>
         </View>
-        {resumeData.profiles?.length > 0 && (
+        {resumeData?.profiles?.length > 0 && (
           <View style={styles.section}>
             <Text style={styles.subHeader}>Profiles</Text>
             <View style={styles.profileList}>
-              {resumeData.profiles.map((profile, idx) => (
+              {resumeData?.profiles?.map((profile, idx) => (
                 <View key={idx} style={styles.listItem}>
                   <View style={styles.profilesItem}>
-                    {profile.network === "linkedin" ? (
+                    {profile?.network === "linkedin" ? (
                       <LinkedInIcon />
                     ) : (
                       <GithubIcon />
                     )}
-                    <Link src={profile.website} style={styles.link}>
-                      {profile.username}
-                    </Link>
+                    {profile && (
+                      <Link src={profile?.website} style={styles.link}>
+                        {profile?.username}
+                      </Link>
+                    )}
                   </View>
                 </View>
               ))}
@@ -92,10 +94,10 @@ function ResumePDF({ resumeData, profilePic }) {
         )}
 
         {/* Summary */}
-        {resumeData.summary && (
+        {resumeData?.summary && (
           <View style={styles.section}>
             <Text style={styles.subHeader}>Summary</Text>
-            <Text>{resumeData.summary}</Text>
+            <Text>{resumeData?.summary}</Text>
           </View>
         )}
 
@@ -233,5 +235,5 @@ function ResumePDF({ resumeData, profilePic }) {
       </Page>
     </Document>
   );
-}
+};
 export default ResumePDF;
