@@ -12,7 +12,7 @@ const useResumeData = () => {
     deleteItem,
     profilePic,
     setProfilePic,
-    deleteProfilePic,
+    delayedDeleteProfilePic,
   } = useResumeStore();
 
   const [activeModal, setActiveModal] = useState(null);
@@ -63,8 +63,8 @@ const useResumeData = () => {
   const deletePic = () => {
     setShowPDF(false);
     setTimeout(() => {
-      deleteProfilePic();
-      setShowPDF(true);
+      delayedDeleteProfilePic();
+      setTimeout(() => setShowPDF(true), 50);
     }, 50);
   };
 
