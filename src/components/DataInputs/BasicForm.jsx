@@ -2,14 +2,11 @@ import TextInput from "../TextInput";
 import "../../styles/basicForm.css";
 import { FaRegUser } from "react-icons/fa";
 import PicUpload from "./PicUpload";
-import useResumeData from "../../hooks/useResumeData";
 import { useResumeStore } from "../../stores/useResumeStore";
 
-function BasicForm() {
-  const { resumeData } = useResumeStore();
+function BasicForm({ deletePic, handlePicUpload, handleChange }) {
+  const { resumeData, profilePic } = useResumeStore();
   const basicData = resumeData.basic;
-  const { handleChange, handlePicUpload, deletePic, profilePic } =
-    useResumeData();
   return (
     <>
       <section id="basics">
