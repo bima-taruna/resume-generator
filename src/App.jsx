@@ -41,13 +41,8 @@ function App() {
 
   return (
     <>
-      <Navbar
-        resumeData={resumeData}
-        profilePic={profilePic}
-        showPDF={showPDF}
-      />
+      <Navbar showPDF={showPDF} />
       <DataInputs
-        basicData={resumeData.basic}
         summaryData={resumeData.summary}
         profilesData={resumeData.profiles}
         experienceData={resumeData.experience}
