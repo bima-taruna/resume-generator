@@ -1,7 +1,10 @@
 import { FaRegNewspaper } from "react-icons/fa";
 import TextArea from "../TextArea";
+import { useResumeStore } from "../../stores/useResumeStore";
 
-function Summary({ summaryData, onChange }) {
+function Summary({ onChange }) {
+  const { resumeData } = useResumeStore();
+  const summaryData = resumeData.summary;
   return (
     <>
       <section id="summary">
