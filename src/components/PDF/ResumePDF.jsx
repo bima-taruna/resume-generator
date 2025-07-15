@@ -27,19 +27,8 @@ Font.register({
   src: "/font/SourceSerif4Bold.ttf",
 });
 // Main PDF Document
-function ResumePDF({
-  profilePic,
-  basic,
-  summary,
-  experience,
-  profiles,
-  education,
-  projects,
-  skills,
-  certifications,
-  languages,
-}) {
-  const rows = chunkArray(skills, 4);
+function ResumePDF({ resumeData, profilePic }) {
+  const rows = chunkArray(resumeData.skills, 4);
   return (
     <Document>
       <Page size={[596.16, 1020.24]} style={styles.page}>
@@ -51,27 +40,27 @@ function ResumePDF({
               <Image src={profilePic} style={styles.profilePic} />
             )}
           <View style={styles.section}>
-            <Text style={styles.header}>{basic.fullName}</Text>
-            <Text>{basic.headline}</Text>
+            <Text style={styles.header}>{resumeData.basic.fullName}</Text>
+            <Text>{resumeData.basic.headline}</Text>
             <View style={styles.headerAdditional}>
               <View style={styles.textWithIcon}>
                 <Location />
-                <Text>{basic.location} | </Text>
+                <Text>{resumeData.basic.location} | </Text>
               </View>
               <View style={styles.textWithIcon}>
                 <PhoneIcon />
-                <Text>{basic.phoneNumber} | </Text>
+                <Text>{resumeData.basic.phoneNumber} | </Text>
               </View>
               <View style={styles.textWithIcon}>
                 <EmailIcon />
-                <Text>{basic.email}</Text>
+                <Text>{resumeData.basic.email}</Text>
               </View>
               <View style={styles.textWithIcon}>
-                {basic.website && (
+                {resumeData.basic.website && (
                   <>
                     <Text>|</Text>
                     <LinkIcon />
-                    <Link src={basic.website} style={styles.link}>
+                    <Link src={resumeData.basic.website} style={styles.link}>
                       Website
                     </Link>
                   </>
@@ -80,11 +69,11 @@ function ResumePDF({
             </View>
           </View>
         </View>
-        {profiles?.length > 0 && (
+        {resumeData.profiles?.length > 0 && (
           <View style={styles.section}>
             <Text style={styles.subHeader}>Profiles</Text>
             <View style={styles.profileList}>
-              {profiles.map((profile, idx) => (
+              {resumeData.profiles.map((profile, idx) => (
                 <View key={idx} style={styles.listItem}>
                   <View style={styles.profilesItem}>
                     {profile.network === "linkedin" ? (
@@ -103,19 +92,19 @@ function ResumePDF({
         )}
 
         {/* Summary */}
-        {summary && (
+        {resumeData.summary && (
           <View style={styles.section}>
             <Text style={styles.subHeader}>Summary</Text>
-            <Text>{summary}</Text>
+            <Text>{resumeData.summary}</Text>
           </View>
         )}
 
         {/* Experience */}
-        {experience?.length > 0 && (
+        {resumeData.experience?.length > 0 && (
           <View style={styles.section}>
             <Text style={styles.subHeader}>Experience</Text>
             <View style={styles.expList}>
-              {experience.map((exp, idx) => (
+              {resumeData.experience.map((exp, idx) => (
                 <View key={idx} style={styles.listItem}>
                   <View style={styles.sectionHeader}>
                     <Text>{exp.company}</Text>
@@ -143,10 +132,10 @@ function ResumePDF({
         )}
 
         {/* Education */}
-        {education?.length > 0 && (
+        {resumeData.education?.length > 0 && (
           <View style={styles.section}>
             <Text style={styles.subHeader}>Education</Text>
-            {education.map((edu, idx) => (
+            {resumeData.education.map((edu, idx) => (
               <View key={idx} style={styles.listItem}>
                 <View style={styles.sectionHeader}>
                   <Text>{edu.institution}</Text>
@@ -163,10 +152,10 @@ function ResumePDF({
         )}
 
         {/* Projects */}
-        {projects?.length > 0 && (
+        {resumeData.projects?.length > 0 && (
           <View style={styles.section}>
             <Text style={styles.subHeader}>Projects</Text>
-            {projects.map((proj, idx) => (
+            {resumeData.projects.map((proj, idx) => (
               <View key={idx} style={styles.listItem}>
                 <View style={styles.sectionHeader}>
                   <Text>{proj.name}</Text>
@@ -190,7 +179,7 @@ function ResumePDF({
         )}
 
         {/* Skills */}
-        {skills?.length > 0 && (
+        {resumeData.skills?.length > 0 && (
           <View style={styles.section}>
             <Text style={styles.subHeader}>Skills</Text>
             {rows?.map((row, idx) => (
@@ -206,10 +195,10 @@ function ResumePDF({
         )}
 
         {/* Certifications */}
-        {certifications?.length > 0 && (
+        {resumeData.certifications?.length > 0 && (
           <View style={styles.section}>
             <Text style={styles.subHeader}>Certifications</Text>
-            {certifications.map((cert, idx) => (
+            {resumeData.certifications.map((cert, idx) => (
               <View key={idx} style={styles.listItem}>
                 <View style={styles.sectionHeader}>
                   <Text>{cert.name}</Text>
@@ -235,10 +224,10 @@ function ResumePDF({
         )}
 
         {/* Languages */}
-        {languages?.length > 0 && (
+        {resumeData.languages?.length > 0 && (
           <View style={styles.section}>
             <Text style={styles.subHeader}>Languages</Text>
-            <Text>{languages.join(", ")}</Text>
+            <Text>{resumeData.languages.join(", ")}</Text>
           </View>
         )}
       </Page>
