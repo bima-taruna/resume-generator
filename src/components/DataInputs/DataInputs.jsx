@@ -14,7 +14,6 @@ import { PiCertificateLight, PiGraduationCap } from "react-icons/pi";
 import { GiSkills } from "react-icons/gi";
 import { motion as Motion, AnimatePresence } from "framer-motion";
 function DataInputs({
-  profilesData,
   experienceData,
   educationData,
   projectsData,
@@ -52,7 +51,6 @@ function DataInputs({
           />
           <Summary onChange={onChange} />
           <Profiles
-            profilesData={profilesData}
             openModal={openModal}
             openUpdateModal={openUpdateModal}
             setIndexItem={setIndexItem}
