@@ -14,7 +14,6 @@ import { PiCertificateLight, PiGraduationCap } from "react-icons/pi";
 import { GiSkills } from "react-icons/gi";
 import { motion as Motion, AnimatePresence } from "framer-motion";
 function DataInputs({
-  basicData,
   summaryData,
   profilesData,
   experienceData,
@@ -28,9 +27,6 @@ function DataInputs({
   openUpdateModal,
   setIndexItem,
   isHidden,
-  profilePic,
-  handlePicUpload,
-  deletePic,
   isMobile,
 }) {
   const mobileAnimationProps = isMobile
@@ -48,13 +44,7 @@ function DataInputs({
           className={`data-inputs`}
           {...(isMobile ? mobileAnimationProps : {})}
         >
-          <BasicForm
-            basicData={basicData}
-            onChange={onChange}
-            profilePic={profilePic}
-            handlePicUpload={handlePicUpload}
-            deletePic={deletePic}
-          />
+          <BasicForm />
           <Summary summaryData={summaryData} onChange={onChange} />
           <Profiles
             profilesData={profilesData}
