@@ -26,8 +26,9 @@ export const useResumeStore = create((set) => ({
   changeBasicData: (id, name, value) =>
     set((state) => {
       let updated;
-      switch (id) {
+      switch (name) {
         case "summary":
+          console.log(name);
           updated = { ...state.resumeData, summary: value };
           break;
         default:
