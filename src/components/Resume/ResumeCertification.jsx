@@ -1,5 +1,7 @@
+import { useCertificationData } from "../../stores/useResumeStore";
 import "../../styles/resumeCertification.css";
-function ResumeCertificiation({ certificationData }) {
+function ResumeCertificiation() {
+  const certificationData = useCertificationData();
   if (!certificationData || certificationData.length < 1) {
     return null;
   }

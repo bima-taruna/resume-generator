@@ -14,13 +14,13 @@ import { PiCertificateLight, PiGraduationCap } from "react-icons/pi";
 import { GiSkills } from "react-icons/gi";
 import { motion as Motion, AnimatePresence } from "framer-motion";
 import {
+  useCertificationData,
   useEducationData,
   useExperienceData,
   useProjectData,
   useSkillData,
 } from "../../stores/useResumeStore";
 function DataInputs({
-  certificationData,
   languageData,
   onChange,
   openModal,
@@ -44,6 +44,7 @@ function DataInputs({
   const educationData = useEducationData();
   const projectsData = useProjectData();
   const skillData = useSkillData();
+  const certificationData = useCertificationData();
   return (
     <AnimatePresence>
       {(isMobile ? isHidden : true) && (
