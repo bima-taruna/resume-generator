@@ -13,8 +13,8 @@ import ItemCard from "../ItemCard";
 import { PiCertificateLight, PiGraduationCap } from "react-icons/pi";
 import { GiSkills } from "react-icons/gi";
 import { motion as Motion, AnimatePresence } from "framer-motion";
+import { useExperienceData } from "../../stores/useResumeStore";
 function DataInputs({
-  experienceData,
   educationData,
   projectsData,
   skillData,
@@ -37,6 +37,8 @@ function DataInputs({
         transition: { type: "spring", stiffness: 300, damping: 30 },
       }
     : {};
+
+  const experienceData = useExperienceData();
   return (
     <AnimatePresence>
       {(isMobile ? isHidden : true) && (

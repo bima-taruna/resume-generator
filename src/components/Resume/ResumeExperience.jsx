@@ -1,6 +1,8 @@
+import { useExperienceData } from "../../stores/useResumeStore";
 import "../../styles/resumeExperience.css";
 import React from "react";
-function ResumeExperience({ experienceData }) {
+function ResumeExperience() {
+  const experienceData = useExperienceData();
   if (!experienceData || experienceData.length < 1) {
     return null;
   }

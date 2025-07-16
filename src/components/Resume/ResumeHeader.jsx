@@ -1,10 +1,10 @@
 import { GrLink, GrLocation, GrPhone } from "react-icons/gr";
 import "../../styles/resumeHeader.css";
 import { MdAlternateEmail } from "react-icons/md";
-import { useResumeStore } from "../../stores/useResumeStore";
+import { useBasicData, useProfilePic } from "../../stores/useResumeStore";
 function ResumeHeader() {
-  const { profilePic, resumeData } = useResumeStore();
-  const basicData = resumeData.basic;
+  const basicData = useBasicData();
+  const profilePic = useProfilePic();
   return (
     <header id="resume-header">
       {profilePic && (

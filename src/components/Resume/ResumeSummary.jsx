@@ -1,8 +1,7 @@
 import React from "react";
-import { useResumeStore } from "../../stores/useResumeStore";
+import { useSummaryData } from "../../stores/useResumeStore";
 function ResumeSummary() {
-  const { resumeData } = useResumeStore();
-  const summary = resumeData.summary;
+  const summary = useSummaryData();
   if (!summary) {
     return null;
   }
