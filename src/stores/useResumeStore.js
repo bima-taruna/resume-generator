@@ -64,3 +64,32 @@ export const useResumeStore = create((set) => ({
       return { resumeData: updated };
     }),
 }));
+
+export const useBasicData = () =>
+  useResumeStore((state) => state.resumeData.basic);
+
+export const useProfileData = () =>
+  useResumeStore((state) => state.resumeData.profiles);
+
+export const useSummaryData = () =>
+  useResumeStore((state) => state.resumeData.summary);
+
+export const useExperienceData = () =>
+  useResumeStore((state) => state.resumeData.experience);
+
+export const useEducationData = () =>
+  useResumeStore((state) => state.resumeData.education);
+
+export const useProjectData = () =>
+  useResumeStore((state) => state.resumeData.projects);
+
+export const useSkillData = () =>
+  useResumeStore((state) => state.resumeData.skills);
+
+export const useCertificationData = () =>
+  useResumeStore((state) => state.resumeData.certifications);
+
+export const useLanguageData = () =>
+  useResumeStore((state) => state.resumeData.languages);
+
+export const useProfilePic = () => useResumeStore((state) => state.profilePic);
