@@ -20,7 +20,12 @@ const PdfDownload = ({ resumeData, profilePic }) => {
     return () => clearTimeout(timeout);
   }, [resumeData, profilePic]);
 
-  if (!showLink || !delayedData) return null;
+  if (!showLink || !delayedData)
+    return (
+      <div className="pdf-download">
+        <span>Loading...</span>
+      </div>
+    );
 
   return (
     <PDFDownloadLink
