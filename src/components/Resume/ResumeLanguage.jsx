@@ -1,5 +1,7 @@
+import { useLanguageData } from "../../stores/useResumeStore";
 import "../../styles/resumeLanguage.css";
-function ResumeLanguage({ languageData }) {
+function ResumeLanguage() {
+  const languageData = useLanguageData();
   return (
     <section id="languages">
       <h3>Languages</h3>

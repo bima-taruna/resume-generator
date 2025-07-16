@@ -42,8 +42,6 @@ function App() {
     <>
       <Navbar showPDF={showPDF} />
       <DataInputs
-        certificationData={resumeData.certifications}
-        languageData={resumeData.languages}
         onChange={handleChange}
         openModal={setActiveModal}
         openUpdateModal={setActiveUpdateModal}
@@ -53,10 +51,7 @@ function App() {
         deletePic={deletePic}
         isMobile={isMobile}
       />
-      <Resume
-        certificationData={resumeData.certifications}
-        languageData={resumeData.languages}
-      />
+      <Resume />
       <CustomModal
         type={activeModal}
         modalType={"CREATE"}

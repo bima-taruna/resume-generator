@@ -9,7 +9,7 @@ import ResumeProject from "./ResumeProject";
 import ResumeSkills from "./ResumeSkills";
 import ResumeCertificiation from "./ResumeCertification";
 import ResumeLanguage from "./ResumeLanguage";
-function Resume({ languageData }) {
+function Resume() {
   return (
     <section className="resume-canvas">
       <ResumeHeader />
@@ -20,7 +20,7 @@ function Resume({ languageData }) {
       <ResumeProject />
       <ResumeSkills />
       <ResumeCertificiation />
-      <ResumeLanguage languageData={languageData} />
+      <ResumeLanguage />
     </section>
   );
 }
