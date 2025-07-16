@@ -9,21 +9,14 @@ import ResumeProject from "./ResumeProject";
 import ResumeSkills from "./ResumeSkills";
 import ResumeCertificiation from "./ResumeCertification";
 import ResumeLanguage from "./ResumeLanguage";
-function Resume({
-  experienceData,
-  educationData,
-  projectsData,
-  skillData,
-  certificationData,
-  languageData,
-}) {
+function Resume({ projectsData, skillData, certificationData, languageData }) {
   return (
     <section className="resume-canvas">
       <ResumeHeader />
       <ResumeProfiles />
       <ResumeSummary />
-      <ResumeExperience experienceData={experienceData} />
-      <ResumeEducation educationData={educationData} />
+      <ResumeExperience />
+      <ResumeEducation />
       <ResumeProject projectsData={projectsData} />
       <ResumeSkills skillData={skillData} />
       <ResumeCertificiation certificationData={certificationData} />

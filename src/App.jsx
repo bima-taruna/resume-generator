@@ -43,8 +43,6 @@ function App() {
     <>
       <Navbar showPDF={showPDF} />
       <DataInputs
-        experienceData={resumeData.experience}
-        educationData={resumeData.education}
         projectsData={resumeData.projects}
         skillData={resumeData.skills}
         certificationData={resumeData.certifications}
@@ -60,8 +58,6 @@ function App() {
         isMobile={isMobile}
       />
       <Resume
-        experienceData={resumeData.experience}
-        educationData={resumeData.education}
         projectsData={resumeData.projects}
         skillData={resumeData.skills}
         certificationData={resumeData.certifications}

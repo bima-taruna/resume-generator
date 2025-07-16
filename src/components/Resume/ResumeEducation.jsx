@@ -1,5 +1,7 @@
+import { useEducationData } from "../../stores/useResumeStore";
 import "../../styles/resumeEducation.css";
-function ResumeEducation({ educationData }) {
+function ResumeEducation() {
+  const educationData = useEducationData();
   if (!educationData || educationData.length < 1) {
     return null;
   }
