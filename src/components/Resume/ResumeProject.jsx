@@ -1,6 +1,8 @@
 import { IoIosLink } from "react-icons/io";
 import "../../styles/resumeProject.css";
-function ResumeProject({ projectsData }) {
+import { useProjectData } from "../../stores/useResumeStore";
+function ResumeProject() {
+  const projectsData = useProjectData();
   if (!projectsData || projectsData.length < 1) {
     return null;
   }

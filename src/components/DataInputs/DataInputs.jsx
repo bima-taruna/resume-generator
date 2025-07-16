@@ -16,9 +16,9 @@ import { motion as Motion, AnimatePresence } from "framer-motion";
 import {
   useEducationData,
   useExperienceData,
+  useProjectData,
 } from "../../stores/useResumeStore";
 function DataInputs({
-  projectsData,
   skillData,
   certificationData,
   languageData,
@@ -42,6 +42,7 @@ function DataInputs({
 
   const experienceData = useExperienceData();
   const educationData = useEducationData();
+  const projectsData = useProjectData();
   return (
     <AnimatePresence>
       {(isMobile ? isHidden : true) && (
