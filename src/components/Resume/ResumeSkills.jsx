@@ -1,5 +1,7 @@
+import { useSkillData } from "../../stores/useResumeStore";
 import "../../styles/resumeSkill.css";
-function ResumeSkills({ skillData }) {
+function ResumeSkills() {
+  const skillData = useSkillData();
   return (
     <section id="skills">
       <h3>Skills</h3>

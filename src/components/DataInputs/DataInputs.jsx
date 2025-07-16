@@ -17,9 +17,9 @@ import {
   useEducationData,
   useExperienceData,
   useProjectData,
+  useSkillData,
 } from "../../stores/useResumeStore";
 function DataInputs({
-  skillData,
   certificationData,
   languageData,
   onChange,
@@ -43,6 +43,7 @@ function DataInputs({
   const experienceData = useExperienceData();
   const educationData = useEducationData();
   const projectsData = useProjectData();
+  const skillData = useSkillData();
   return (
     <AnimatePresence>
       {(isMobile ? isHidden : true) && (

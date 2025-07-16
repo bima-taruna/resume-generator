@@ -21,7 +21,6 @@ function App() {
     activeInput,
     setActiveInput,
     handlePicUpload,
-    profilePic,
     deletePic,
     isMobile,
     showPDF,
@@ -43,7 +42,6 @@ function App() {
     <>
       <Navbar showPDF={showPDF} />
       <DataInputs
-        skillData={resumeData.skills}
         certificationData={resumeData.certifications}
         languageData={resumeData.languages}
         onChange={handleChange}
@@ -51,16 +49,13 @@ function App() {
         openUpdateModal={setActiveUpdateModal}
         setIndexItem={setIndexItem}
         isHidden={!activeInput}
-        profilePic={profilePic}
         handlePicUpload={handlePicUpload}
         deletePic={deletePic}
         isMobile={isMobile}
       />
       <Resume
-        skillData={resumeData.skills}
         certificationData={resumeData.certifications}
         languageData={resumeData.languages}
-        profilePic={profilePic}
       />
       <CustomModal
         type={activeModal}
